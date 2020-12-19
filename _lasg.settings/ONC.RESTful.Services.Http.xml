@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClassModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClassModel ClassName="FeriadoService" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="true" XmlComment="Feriado HTTP service controller." ProductName="ONC.RESTful.Services.Http" RoutePrefix="api/Feriado">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>System.Net</string>
+      <string>System.Net.Http</string>
+      <string>System.Web.Http</string>
+      <string>ONC.RESTful.Business</string>
+      <string>ONC.RESTful.Entities</string>
+    </NamespacesToImport>
+    <Methods>
+      <MethodModel Name="Add" RouteTemplate="" MethodName="Add" HttpVerb="HttpPost" ComponentName="FeriadoComponent" Signature="Add(Feriado feriado)" ReturnSignature="Feriado" CallSignature="Add(feriado)" IsUpdated="false" XmlComment="Calls the Add business method of the FeriadoComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>ONC.RESTful.Entities</string>
+          <string>ONC.RESTful.Business</string>
+        </Namespaces>
+        <Parameters>
+          <ParameterModel Type="Feriado" Name="feriado" IsPrimitive="false" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+        </Parameters>
+      </MethodModel>
+      <MethodModel Name="Edit" RouteTemplate="" MethodName="Edit" HttpVerb="HttpPut" ComponentName="FeriadoComponent" Signature="Edit(Feriado feriado)" ReturnSignature="void" CallSignature="Edit(feriado)" IsUpdated="false" XmlComment="Calls the Edit business method of the FeriadoComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>ONC.RESTful.Entities</string>
+          <string>System</string>
+          <string>ONC.RESTful.Business</string>
+        </Namespaces>
+        <Parameters>
+          <ParameterModel Type="Feriado" Name="feriado" IsPrimitive="false" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+        </Parameters>
+      </MethodModel>
+      <MethodModel Name="Find" RouteTemplate="{id}" MethodName="Find" HttpVerb="HttpGet" ComponentName="FeriadoComponent" Signature="Find(int id)" ReturnSignature="Feriado" CallSignature="Find(id)" IsUpdated="false" XmlComment="Calls the Find business method of the FeriadoComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>System</string>
+          <string>ONC.RESTful.Entities</string>
+          <string>ONC.RESTful.Business</string>
+        </Namespaces>
+        <Parameters>
+          <ParameterModel Type="int" Name="id" IsPrimitive="true" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+        </Parameters>
+      </MethodModel>
+      <MethodModel Name="Remove" RouteTemplate="" MethodName="Remove" HttpVerb="HttpDelete" ComponentName="FeriadoComponent" Signature="Remove(int id)" ReturnSignature="void" CallSignature="Remove(id)" IsUpdated="false" XmlComment="Calls the Remove business method of the FeriadoComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>System</string>
+          <string>ONC.RESTful.Business</string>
+        </Namespaces>
+        <Parameters>
+          <ParameterModel Type="int" Name="id" IsPrimitive="true" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+        </Parameters>
+      </MethodModel>
+      <MethodModel Name="Select" RouteTemplate="" MethodName="Select" HttpVerb="HttpGet" ComponentName="FeriadoComponent" Signature="Select()" ReturnSignature="List&lt;Feriado&gt;" CallSignature="Select()" IsUpdated="false" XmlComment="Calls the Select business method of the FeriadoComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>ONC.RESTful.Entities</string>
+          <string>ONC.RESTful.Business</string>
+        </Namespaces>
+        <Parameters />
+      </MethodModel>
+    </Methods>
+  </ClassModel>
+  <ClassModel ClassName="FrenteObraService" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="true" XmlComment="FrenteObra HTTP service controller." ProductName="ONC.RESTful.Services.Http" RoutePrefix="api/FrenteObra">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>System.Net</string>
+      <string>System.Net.Http</string>
+      <string>System.Web.Http</string>
+      <string>ONC.RESTful.Business.Obra</string>
+      <string>ONC.RESTful.Entities.Obra</string>
+    </NamespacesToImport>
+    <Methods>
+      <MethodModel Name="Find" RouteTemplate="{estado}/{numero}" MethodName="Find" HttpVerb="HttpGet" ComponentName="FrenteObraComponent" Signature="Find(int estado, string numero)" ReturnSignature="FrenteObraGetEstadoNumero" CallSignature="Find(estado, numero)" IsUpdated="false" XmlComment="Calls the Find business method of the FrenteObraComponent." WrapRequest="false" WrapResponse="false" RouteAttribute="true">
+        <Namespaces>
+          <string>System</string>
+          <string>ONC.RESTful.Entities.Obra</string>
+          <string>ONC.RESTful.Business.Obra</string>
+        </Namespaces>
+        <Parameters>
+          <ParameterModel Type="int" Name="estado" IsPrimitive="true" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+          <ParameterModel Type="string" Name="numero" IsPrimitive="true" IsEnum="false" IsOut="false" DeclareIn="MethodSignature" ParameterBinding="Auto" IsInternallyDeclared="false" />
+        </Parameters>
+      </MethodModel>
+    </Methods>
+  </ClassModel>
+</ArrayOfClassModel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClassModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClassModel ClassName="Feriado" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="false" XmlComment="Represents a row of Feriado data." ProductName="ONC.RESTful.Entities" Parent="" OverrideToStringMethod="true" HasSerializableAttribute="true" NotifyPropertyChange="false" ToStringDelimiter="44">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>System.ComponentModel</string>
+      <string>System.Linq</string>
+      <string>System.Runtime.Serialization</string>
+    </NamespacesToImport>
+    <Columns>
+      <ColumnModel IsUpdated="false" Name="id" PropertyName="id" DisplayName="id" TableName="Feriado" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="true" />
+      <ColumnModel IsUpdated="false" Name="dia" PropertyName="dia" DisplayName="dia" TableName="Feriado" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
+      <ColumnModel IsUpdated="false" Name="mes" PropertyName="mes" DisplayName="mes" TableName="Feriado" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
+      <ColumnModel IsUpdated="false" Name="ano" PropertyName="ano" DisplayName="ano" TableName="Feriado" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
+      <ColumnModel IsUpdated="false" Name="tipo" PropertyName="tipo" DisplayName="tipo" TableName="Feriado" Type="string" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
+      <ColumnModel IsUpdated="false" Name="fecha" PropertyName="fecha" DisplayName="fecha" TableName="Feriado" Type="DateTime" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
+    </Columns>
+  </ClassModel>
+</ArrayOfClassModel>

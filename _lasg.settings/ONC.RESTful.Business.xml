@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClassModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClassModel ClassName="FeriadoComponent" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="true" XmlComment="Feriado business component." ProductName="ONC.RESTful.Business">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>ONC.RESTful.Entities</string>
+      <string>ONC.RESTful.Data</string>
+    </NamespacesToImport>
+    <Methods>
+      <BusinessMethodModel IsUpdated="false" Name="Add" XmlComment="Add business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="Create" ComponentName="FeriadoDAC" ReturnSignature="Feriado" IsReturnSignature="true" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="Feriado" Name="feriado" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+      <BusinessMethodModel IsUpdated="false" Name="Remove" XmlComment="Remove business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="DeleteById" ComponentName="FeriadoDAC" ReturnSignature="void" IsReturnSignature="false" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="int" Name="id" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+      <BusinessMethodModel IsUpdated="false" Name="Select" XmlComment="Select business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="Select" ComponentName="FeriadoDAC" ReturnSignature="List&lt;Feriado&gt;" IsReturnSignature="true" TransactionBegin="false" TransactionEnd="false">
+            <Parameters />
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+      <BusinessMethodModel IsUpdated="false" Name="Find" XmlComment="Find business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="SelectById" ComponentName="FeriadoDAC" ReturnSignature="Feriado" IsReturnSignature="true" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="int" Name="id" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+      <BusinessMethodModel IsUpdated="false" Name="Edit" XmlComment="Edit business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="UpdateById" ComponentName="FeriadoDAC" ReturnSignature="void" IsReturnSignature="false" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="Feriado" Name="feriado" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+    </Methods>
+    <NonSuffixName>Feriado</NonSuffixName>
+  </ClassModel>
+</ArrayOfClassModel>
