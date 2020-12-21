@@ -1,0 +1,16 @@
+﻿@model dynamic
+
+@*@{
+    var grid = new WebGrid(Model, canPage: false, canSort: false);
+}
+@grid.GetHtml(tableStyle: "table table-condensed", headerStyle: "table table-cell", footerStyle: "table")*@
+
+<br />
+<br />
+<br />
+@foreach (dynamic m in Model)
+{
+    <span>@m.Key: </span>
+    <span>@m.Value</span><br />
+}
+

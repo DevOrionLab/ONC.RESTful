@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreFrenteObra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroFrenteObra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreGrupoObraTipoProyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroGrupoObra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RazonSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCUIT)
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreFrenteObra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroFrenteObra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreGrupoObraTipoProyecto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroGrupoObra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RazonSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCUIT)
+        </td>
+        
+    </tr>
+}
+
+</table>
