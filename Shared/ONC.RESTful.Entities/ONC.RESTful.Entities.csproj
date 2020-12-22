@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feriado.cs" />
+    <Compile Include="Historico.cs" />
     <Compile Include="Obra\FrenteObraGetEstadoNumero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

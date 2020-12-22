@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FeriadoService.cs" />
+    <Compile Include="HistoricoService.cs" />
     <Compile Include="Obra\FrenteObraService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

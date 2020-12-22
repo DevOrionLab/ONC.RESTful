@@ -8,7 +8,6 @@ namespace ONC.RESTful.Data
 {
     public static class DbExtentions
     {
-
         /// <summary>
         /// Iterara sobre los campos de un datareader y devuelve un objeto expando
         /// </summary>

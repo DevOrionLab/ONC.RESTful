@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeriadoComponent.cs" />
+    <Compile Include="Feriado\FeriadoComponent.cs" />
+    <Compile Include="HistoricoComponent.cs" />
     <Compile Include="Obra\FrenteObraComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

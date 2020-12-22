@@ -2,7 +2,7 @@
 // HTTP Service Controller
 // ONC.RESTful.WebServices
 //
-// Generado por vcontreras on 12/18/2020 16:49:01 
+// Generado por vcontreras on 20/12/2020
 //====================================================================================================
 
 using System;
@@ -29,11 +29,12 @@ namespace ONC.RESTful.Services.Http
         /// <param name="numero"> Valor alfanumérico que representa el Número del Frente de Obra.</param>
         /// <remarks>Llama al método de negocio Find de FrenteObraComponent, el cual a través del estado y el numero retornan el FrenteObraGetEstadoNumero.</remarks>
         /// <response code="400">Bad request</response>
+        /// <response code="422">Unprocessable Entity</response>
         /// <response code="500">Internal Server Error</response>
         /// <returns>Devuelve un objeto FrenteObraGetEstadoNumero.</returns>
         [HttpGet]
         //[Route("{estado}/{numero}")]
-        [Route("")]
+        [Route("GetFrenteObraByEstadoAndNumero")]
         public FrenteObraGetEstadoNumero Find(int estado, string numero)
         {
             try
@@ -65,7 +66,7 @@ namespace ONC.RESTful.Services.Http
         /// <response code="500">Internal Server Error</response>
         /// <returns>Devuelve un objeto FrenteObraGetEstadoNumero.</returns>
         [HttpGet]
-        [Route("GetFrenteObraByEstadoAndNumero")]
+        [Route("GetFrenteObraByEstadoAndNumeroToExpando")]
         public dynamic FindToExpando(int estado, string numero)
         {
             try

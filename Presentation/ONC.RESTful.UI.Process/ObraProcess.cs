@@ -22,7 +22,7 @@ namespace ONC.RESTful.UI.Process
                 {"estado", estado},
                 {"numero", numero}
             };
-            var response = HttpGet<dynamic>("api/FrenteObra/GetFrenteObraByEstadoAndNumero", parameters, MediaType.Json);
+            var response = HttpGet<dynamic>("/api/FrenteObra/GetFrenteObraByEstadoAndNumeroToExpando", parameters, MediaType.Json);
             return response;
         }
         /// <summary>
@@ -38,7 +38,7 @@ namespace ONC.RESTful.UI.Process
                 {"estado", estado},
                 {"numero", numero}
             };
-            var response = HttpGet<FrenteObraGetEstadoNumero>("api/FrenteObra", parameters, MediaType.Json);
+            var response = HttpGet<FrenteObraGetEstadoNumero>("/api/FrenteObra/GetFrenteObraByEstadoAndNumero", parameters, MediaType.Json);
             return response;
         }
     }

@@ -48,7 +48,8 @@
   <ItemGroup>
     <Compile Include="DataAccessComponent.cs" />
     <Compile Include="DbExtentions.cs" />
-    <Compile Include="FeriadoDAC.cs" />
+    <Compile Include="Feriado\FeriadoDAC.cs" />
+    <Compile Include="HistoricoDAC.cs" />
     <Compile Include="Obra\FrenteObraDac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

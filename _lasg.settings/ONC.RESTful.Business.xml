@@ -60,4 +60,38 @@
     </Methods>
     <NonSuffixName>Feriado</NonSuffixName>
   </ClassModel>
+  <ClassModel ClassName="HistoricoComponent" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="true" XmlComment="Historico business component." ProductName="ONC.RESTful.Business">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>ONC.RESTful.Entities</string>
+      <string>ONC.RESTful.Data</string>
+    </NamespacesToImport>
+    <Methods>
+      <BusinessMethodModel IsUpdated="false" Name="Select" XmlComment="Select business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="SelectPageSort" ComponentName="HistoricoDAC" ReturnSignature="List&lt;Historico&gt;" IsReturnSignature="true" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="int" Name="maximumRows" IsInternallyDeclared="false" />
+              <ParameterModel Type="int" Name="startRowIndex" IsInternallyDeclared="false" />
+              <ParameterModel Type="string" Name="sortExpression" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+      <BusinessMethodModel IsUpdated="false" Name="Find" XmlComment="Find business method. " ReturnSignature="">
+        <AccessModifier>Public</AccessModifier>
+        <CallMethods>
+          <MethodModel Name="SelectPage" ComponentName="HistoricoDAC" ReturnSignature="List&lt;Historico&gt;" IsReturnSignature="true" TransactionBegin="false" TransactionEnd="false">
+            <Parameters>
+              <ParameterModel Type="int" Name="currentPage" IsInternallyDeclared="false" />
+            </Parameters>
+          </MethodModel>
+        </CallMethods>
+      </BusinessMethodModel>
+    </Methods>
+    <NonSuffixName>Historico</NonSuffixName>
+  </ClassModel>
 </ArrayOfClassModel>

@@ -18,4 +18,26 @@
       <ColumnModel IsUpdated="false" Name="fecha" PropertyName="fecha" DisplayName="fecha" TableName="Feriado" Type="DateTime" SetAsXmlAttribute="false" SetDisplayNameAttribute="true" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" />
     </Columns>
   </ClassModel>
+  <ClassModel ClassName="Historico" IsUpdated="false" GenerateXmlComments="true" UseDefaultComments="true" XmlComment="Represents a row of Historico data." ProductName="ONC.RESTful.Entities" Parent="" OverrideToStringMethod="false" HasSerializableAttribute="true" NotifyPropertyChange="false" ToStringDelimiter="44">
+    <NamespacesToImport>
+      <string>System</string>
+      <string>System.Collections.Generic</string>
+      <string>System.Collections.ObjectModel</string>
+      <string>System.ComponentModel</string>
+      <string>System.Linq</string>
+      <string>System.Runtime.Serialization</string>
+    </NamespacesToImport>
+    <Columns>
+      <ColumnModel IsUpdated="false" Name="IdHistorico" PropertyName="IdHistorico" DisplayName="Id Historico" TableName="Historico" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="true" XmlComment="Gets or sets a int value for the IdHistorico column." />
+      <ColumnModel IsUpdated="false" Name="Idint" PropertyName="Idint" DisplayName="Idint" TableName="Historico" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a int value for the Idint column." />
+      <ColumnModel IsUpdated="false" Name="Iduniq" PropertyName="Iduniq" DisplayName="Iduniq" TableName="Historico" Type="Guid" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a Guid value for the Iduniq column." />
+      <ColumnModel IsUpdated="false" Name="nombre" PropertyName="nombre" DisplayName="nombre" TableName="Historico" Type="string" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a string value for the nombre column." />
+      <ColumnModel IsUpdated="false" Name="comentario" PropertyName="comentario" DisplayName="comentario" TableName="Historico" Type="string" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a string value for the comentario column." />
+      <ColumnModel IsUpdated="false" Name="fecha" PropertyName="fecha" DisplayName="fecha" TableName="Historico" Type="DateTime" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a DateTime value for the fecha column." />
+      <ColumnModel IsUpdated="false" Name="usuario" PropertyName="usuario" DisplayName="usuario" TableName="Historico" Type="Guid" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a Guid value for the usuario column." />
+      <ColumnModel IsUpdated="false" Name="nombreusuario" PropertyName="nombreusuario" DisplayName="nombreusuario" TableName="Historico" Type="string" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a string value for the nombreusuario column." />
+      <ColumnModel IsUpdated="false" Name="estado" PropertyName="estado" DisplayName="estado" TableName="Historico" Type="bool" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a bool value for the estado column." />
+      <ColumnModel IsUpdated="false" Name="tipo" PropertyName="tipo" DisplayName="tipo" TableName="Historico" Type="int" SetAsXmlAttribute="false" SetDisplayNameAttribute="false" IsBrowsable="true" MarkAsVirtual="false" IsNullable="false" IsList="false" IsObject="false" IsPrimaryKey="false" XmlComment="Gets or sets a int value for the tipo column." />
+    </Columns>
+  </ClassModel>
 </ArrayOfClassModel>
