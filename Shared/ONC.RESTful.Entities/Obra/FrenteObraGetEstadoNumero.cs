@@ -12,7 +12,7 @@ namespace ONC.RESTful.Entities.Obra
     public class FrenteObraGetEstadoNumero
     {
         /// <summary>
-        /// NombreFrenteObra
+        /// Valor alfanumérico que representa el Nombre del Frente de Obra
         /// </summary>
         [DataMember]
         public string NombreFrenteObra { get; set; }

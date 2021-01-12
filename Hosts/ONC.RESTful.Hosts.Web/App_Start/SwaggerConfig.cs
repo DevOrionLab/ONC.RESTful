@@ -5,6 +5,9 @@ using Swashbuckle.Application;
 using System.Reflection;
 using System.IO;
 using System;
+using System.Collections.Generic;
+using System.Web.Http.Description;
+using Swashbuckle.Swagger;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -15,6 +18,10 @@ namespace ONC.RESTful.Hosts.Web
         protected static string GetXmlCommentsPath()
         {
             return System.String.Format(@"{0}\bin\ONC.RESTful.Services.Http.xml", System.AppDomain.CurrentDomain.BaseDirectory);
+        }
+        protected static string GetXmlCommentsPathForModels()
+        {
+            return System.String.Format(@"{0}\bin\ONC.RESTful.Entities.xml", System.AppDomain.CurrentDomain.BaseDirectory);
         }
         public static void Register()
         {
@@ -40,6 +47,7 @@ namespace ONC.RESTful.Hosts.Web
                         // additional fields by chaining methods off SingleApiVersion.
                         //
                         c.SingleApiVersion("v1", "Swagger UI - ONC");
+                        c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
 
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
@@ -109,9 +117,10 @@ namespace ONC.RESTful.Hosts.Web
                         // more Xml comment files.
                         //
                         c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments(GetXmlCommentsPathForModels());
                         //var baseDirectory = AppDomain.CurrentDomain.BaseDirectory + "\\bin";
                         //var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".XML";
-                       
+
                         //var commentsFile = Path.Combine(baseDirectory, commentsFileName);
                         //c.IncludeXmlComments(commentsFile);
 
@@ -262,6 +271,23 @@ namespace ONC.RESTful.Hosts.Web
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+        public class AuthorizationHeaderParameterOperationFilter : IOperationFilter
+        {
+            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+            {
+                if (operation.parameters == null)
+                    operation.parameters = new List<Parameter>();
+
+                operation.parameters.Add(new Parameter
+                {
+                    name = "Authorization",
+                    @in = "header",
+                    description = "JSON Web Token (JWT)",
+                    required = false,
+                    type = "string"
+                });
+            }
         }
     }
 }

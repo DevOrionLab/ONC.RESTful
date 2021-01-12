@@ -20,7 +20,7 @@ namespace ONC.RESTful.Services.Http
     /// Feriado HTTP service controller.
     /// </summary>
     [RoutePrefix("api/Feriado")]
-    public class FeriadoService : ApiController
+    internal class FeriadoService : ApiController
     {
         /// <summary>
         /// Llama al método de negocio Add de FeriadoComponent.

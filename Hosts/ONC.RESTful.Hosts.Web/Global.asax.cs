@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+using ONC.RESTful.Framework.Logging;
 
 namespace ONC.RESTful.Hosts.Web
 {
@@ -12,6 +13,9 @@ namespace ONC.RESTful.Hosts.Web
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            LoggingService.Instance.Initialise(1000);
+            LoggingService.Instance.Log("Init LoggingService.Instance");
         }
     }
 }

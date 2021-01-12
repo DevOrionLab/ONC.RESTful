@@ -68,6 +68,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logging\ILoggingService.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\LoggingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

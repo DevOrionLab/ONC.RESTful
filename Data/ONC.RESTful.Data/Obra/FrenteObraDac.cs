@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using ONC.RESTful.Entities;
 using ONC.RESTful.Entities.Obra;
@@ -50,6 +51,7 @@ namespace ONC.RESTful.Data.Obra
             }
 
             return result;
+            
         }
 
         /// <summary>

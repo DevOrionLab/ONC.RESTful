@@ -21,7 +21,7 @@ namespace ONC.RESTful.Services.Http
     /// Historico HTTP service controller.
     /// </summary>
     [RoutePrefix("api/Historico")]
-    public class HistoricoService : ApiController
+    internal class HistoricoService : ApiController
     {
         /// <summary>
         /// Llama al método de negocio Find de HistoricoComponent
@@ -34,7 +34,7 @@ namespace ONC.RESTful.Services.Http
         /// <returns>Devuelve una Lista de objetos Históricos</returns>
         [HttpGet]
         [Route("SelectPage")]
-        public List<Historico> SelectPage(int currentPage)
+        private List<Historico> SelectPage(int currentPage)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace ONC.RESTful.Services.Http
         /// <returns>Returns a List<Historico> object.</returns>
         [HttpGet]
         [Route("SelectPageSort")]
-        public List<Historico> SelectPageSort(int maximumRows, int startRowIndex, string sortExpression)
+        private List<Historico> SelectPageSort(int maximumRows, int startRowIndex, string sortExpression)
         {
             try
             {
