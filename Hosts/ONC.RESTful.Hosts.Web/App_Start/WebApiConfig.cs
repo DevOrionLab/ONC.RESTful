@@ -28,8 +28,11 @@ namespace ONC.RESTful.Hosts.Web
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            // JSON Web Token (JWT)
             config.MessageHandlers.Add(new TokenValidationHandler());
 
+            //Custom Exception Filter
             config.Filters.Add(new CustomExceptionFilter());
 
             // config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionHandler());

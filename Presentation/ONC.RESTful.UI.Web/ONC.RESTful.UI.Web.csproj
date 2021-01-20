@@ -109,10 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListLogViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +133,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,12 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\ONC.RESTful.Entities\ONC.RESTful.Entities.csproj">
       <Project>{f2e15378-0608-46aa-9922-8832727224ce}</Project>
       <Name>ONC.RESTful.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\ONC.RESTful.Framework\ONC.RESTful.Framework.csproj">
+      <Project>{02c71b70-5fd5-43e9-96b8-be8a0ab9b1d5}</Project>
+      <Name>ONC.RESTful.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\ONC.RESTful.UI.Process\ONC.RESTful.UI.Process.csproj">
       <Project>{f950ec35-457a-4d40-89ab-4c8efd330411}</Project>

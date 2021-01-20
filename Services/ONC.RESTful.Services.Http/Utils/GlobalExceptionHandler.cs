@@ -21,13 +21,12 @@ namespace ONC.RESTful.Services.Http.Utils
         public async override Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken)
         {
             // Access Exception using context.Exception;
-            const string errorMessage = "An unexpected error occured";
+            const string errorMessage = "El servicio lanzó una excepción no controlada.";
             var response = context.Request.CreateResponse(HttpStatusCode.InternalServerError,
                 new
                 {
                     Message = errorMessage
                 });
-
             response.Headers.Add("X-Error", errorMessage);
             context.Result = new ResponseMessageResult(response);
         }

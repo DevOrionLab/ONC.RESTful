@@ -15,14 +15,14 @@ namespace ONC.RESTful.UI.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var p = new ObraProcess();
-            dynamic data = p.GetFrenteObraByEstadoAndNumero(3, "81-0001-FDO18");
+            //var p = new ObraProcess();
+            //dynamic data = p.GetFrenteObraByEstadoAndNumero(3, "81-0001-FDO18");
 
-            string jsonString = JsonConvert.SerializeObject(data);
-            JavaScriptSerializer jss = new JavaScriptSerializer();
-            var result = jss.Deserialize<dynamic>(jsonString);
+            //string jsonString = JsonConvert.SerializeObject(data);
+            //JavaScriptSerializer jss = new JavaScriptSerializer();
+            //var result = jss.Deserialize<dynamic>(jsonString);
 
-            return View(result);
+            return View();
         }
         /// <summary>
         /// 

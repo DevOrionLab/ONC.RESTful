@@ -9,6 +9,6 @@ namespace ONC.RESTful.Framework.Logging
         public string Method { get; set; }
         public string DeclaringType { get; set; }
         public string LineNumber { get; set; }
-        public string ErrorMessage { get; set; }
+        public string Message { get; set; }
     }
 }

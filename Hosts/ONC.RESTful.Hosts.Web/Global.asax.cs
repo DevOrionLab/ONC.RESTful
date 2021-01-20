@@ -14,8 +14,8 @@ namespace ONC.RESTful.Hosts.Web
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            LoggingService.Instance.Initialise(1000);
-            LoggingService.Instance.Log("Init LoggingService.Instance");
+            LoggingService.Instance.Initialise();
+            LoggingService.Instance.Log("Inicio módulo de bitácoras.");
         }
     }
 }

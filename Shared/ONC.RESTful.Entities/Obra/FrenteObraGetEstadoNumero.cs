@@ -18,31 +18,31 @@ namespace ONC.RESTful.Entities.Obra
         public string NombreFrenteObra { get; set; }
 
         /// <summary>
-        /// NumeroFrenteObra
+        /// Valor alfanumérico que representa el Número del Frente de Obra
         /// </summary>
         [DataMember]
         public string NumeroFrenteObra { get; set; }
 
         /// <summary>
-        /// NombreGrupoObraTipoProyecto
+        /// Valor alfanumérico que representa el Nombre Grupo de Obra y Tipo Proyecto
         /// </summary>
         [DataMember]
         public string NombreGrupoObraTipoProyecto { get; set; }
 
         /// <summary>
-        /// NroGrupoObra
+        /// Valor alfanumérico que representa el Número Grupo de Obra
         /// </summary>
         [DataMember]
         public string NroGrupoObra { get; set; }
 
         /// <summary>
-        /// RazonSocial
+        /// Valor de cadena que representa la Razón Social
         /// </summary>
         [DataMember]
         public string RazonSocial { get; set; }
 
         /// <summary>
-        /// NumeroCUIT
+        /// Valor alfanumérico que representa el Número de CUIT
         /// </summary>
         [DataMember]
         public string NumeroCUIT { get; set; }

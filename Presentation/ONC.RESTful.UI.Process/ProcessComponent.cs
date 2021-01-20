@@ -80,10 +80,10 @@ namespace ONC.RESTful.UI.Process
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings["serviceUrl"]);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(mediaType));
-
+                client.DefaultRequestHeaders.Authorization= new AuthenticationHeaderValue("Bearer", ConfigurationManager.AppSettings["token1"]);
+                
                 var response = client.GetAsync(pathAndQuery).Result;
                 response.EnsureSuccessStatusCode();
-
                 result = response.Content.ReadAsAsync<T>().Result;
             }
 

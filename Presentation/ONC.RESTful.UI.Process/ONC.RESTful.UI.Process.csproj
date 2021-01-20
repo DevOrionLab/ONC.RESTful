@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DashboardProcess.cs" />
     <Compile Include="MediaType.cs" />
     <Compile Include="ObraProcess.cs" />
     <Compile Include="ProcessComponent.cs" />
@@ -87,6 +88,10 @@
     <ProjectReference Include="..\..\Shared\ONC.RESTful.Entities\ONC.RESTful.Entities.csproj">
       <Project>{F2E15378-0608-46AA-9922-8832727224CE}</Project>
       <Name>ONC.RESTful.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\ONC.RESTful.Framework\ONC.RESTful.Framework.csproj">
+      <Project>{02c71b70-5fd5-43e9-96b8-be8a0ab9b1d5}</Project>
+      <Name>ONC.RESTful.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

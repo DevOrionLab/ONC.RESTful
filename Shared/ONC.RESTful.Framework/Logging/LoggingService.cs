@@ -11,7 +11,7 @@ namespace ONC.RESTful.Framework.Logging
     /// <summary>
     /// A class for logging errors to a text file. Works in Partial Trust.
     /// </summary>
-    public  class LoggingService : ILoggingService
+    public class LoggingService : ILoggingService
     {
         private static readonly Lazy<LoggingService> lazy = new Lazy<LoggingService>(() => new LoggingService());
 
@@ -20,6 +20,7 @@ namespace ONC.RESTful.Framework.Logging
         private const string LogFileNameOnly = @"LogFile";
         private const string LogFileExtension = @".txt";
         private const string LogFileDirectory = @"~/App_Data";
+        private const int BaseLogSize = 3000;
 
         private const string DateTimeFormat = @"dd/MM/yyyy HH:mm:ss";
         private static readonly object LogLock = new object();
@@ -146,7 +147,7 @@ namespace ONC.RESTful.Framework.Logging
                     Method = lineSplit[2].Trim(),
                     DeclaringType = lineSplit[3].Trim(),
                     LineNumber = lineSplit[4].Trim(),
-                    ErrorMessage = lineSplit[5].Trim(),
+                    Message = lineSplit[5].Trim(),
                 };
             }
             catch (Exception)
@@ -188,8 +189,11 @@ namespace ONC.RESTful.Framework.Logging
         /// Initialise the logging. Checks to see if file exists, so best 
         /// called ONCE from an application entry point to avoid threading issues
         /// </summary>
-        public void Initialise(int maxLogSize)
+        public void Initialise(int maxLogSize = 0)
         {
+            if (maxLogSize < BaseLogSize)
+                maxLogSize = _maxLogSize;
+
             CheckFileExists(maxLogSize);
         }
 
@@ -256,6 +260,6 @@ namespace ONC.RESTful.Framework.Logging
             return ReadLogFile();
         }
 
-        
+
     }
 }

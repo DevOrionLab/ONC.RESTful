@@ -47,7 +47,7 @@ namespace ONC.RESTful.Services.Http.Utils
 
             HttpResponseMessage httpResponseMessage;
 
-            //LoggingService.Instance.Error(context.Exception);
+            LoggingService.Instance.Error(exception);
             switch (exceptionType)
             {
                 case "System.Data.DuplicateNameException":
@@ -85,7 +85,7 @@ namespace ONC.RESTful.Services.Http.Utils
                     break;
 
                 default:
-                    httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, "El servicio lanzó una excepción no controlada.");
+                    httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, $"{exceptionType}: El servicio lanzó una excepción no controlada.");
                     break;
             }
             context.Response = httpResponseMessage;

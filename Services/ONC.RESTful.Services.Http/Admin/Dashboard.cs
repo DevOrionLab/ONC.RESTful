@@ -23,7 +23,7 @@ namespace ONC.RESTful.Services.Http
     /// </summary>
     [Authorize(Roles = "Administrator")]
     [RoutePrefix("api/dashboard")]
-    public class DashboardService : ApiController
+    internal class DashboardService : ApiController
     {
         /// <summary>
         /// 
