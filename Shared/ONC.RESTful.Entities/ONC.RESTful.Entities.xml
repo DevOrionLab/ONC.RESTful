@@ -1,0 +1,993 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ONC.RESTful.Entities</name>
+    </assembly>
+    <members>
+        <member name="P:ONC.RESTful.Entities.ApiResult.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.ApiResult.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.ApiResult.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Enums.TipoIncluyeProrrogaPlazo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ONC.RESTful.Entities.Enums.TipoModalidadPagoAnticipo.Cheque">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ONC.RESTful.Entities.Enums.TipoModalidadPagoAnticipo.Efectivo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Feriado">
+            <summary>
+            Representa una fila de datos de la tabla Feriado.
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.ActaInicioObra">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ActaInicioObra.Fecha">
+            <summary>
+            Fecha del Acta de Inicio
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ActaInicioObra.ActaDeInicio">
+            <summary>
+            Acta de Inicio. Formato hash Blockchain Federal Argentina
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.AmpliacionAdicional">
+            <summary>
+            28. Ampliaciones, adicionales, economías y/o demasías.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NumeroSolicitud">
+            <summary>
+            Número de solicitud de modificación de obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.FechaVigenteFinalizacion">
+            <summary>
+            Fecha vigente de finalización
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.CantidadPlazoEjecucionVigente">
+            <summary>
+            Cantidad del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.UnidadTiempoPlazoEjecucionVigente">
+            <summary>
+            Unidad de tiempo del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.MontoOriginalContrato">
+            <summary>
+            Monto original del contrato
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.TipoModificacion">
+            <summary>
+            Tipo de modificación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.MotivoCausaModificacion">
+            <summary>
+            Motivo/Causa de la modificación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.MontoVariacionContratoPreciosBase">
+            <summary>
+            Monto de variación del contrato a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.VariacionContratoPreciosBase">
+            <summary>
+            Variación del contrato a precios base (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NuevoMontoContratoAprobado">
+            <summary>
+            Nuevo monto de contrato aprobado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.VariacionPorEconomias">
+            <summary>
+            Variación por economías (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.VariacionPorDemasiasAdicionales">
+            <summary>
+            Variación por demasías y/o adicionales (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.VariacionAcumuladaContratoPreciosBase">
+            <summary>
+            Variación acumulada del contrato a precios base (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.FechaAprobacion">
+            <summary>
+            Fecha de aprobación (firma del acto administrativo)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.IncluyeProrrogaPlazo">
+            <summary>
+            Incluye prórroga de plazo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.CantidadDiasPlazoProrroga">
+            <summary>
+            Cantidad de días de plazo de prórroga
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.TipoDiasPlazoProrroga">
+            <summary>
+            Tipo de días del plazo de prórroga
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NuevaFechaFinalizacionObra">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NuevoPlazoEjecucionObra">
+            <summary>
+            Nueva fecha de finalización de la obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NuevoTipoPlazoEjecucionObra">
+            <summary>
+            Nuevo tipo de plazo de ejecución de la obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.NumeroGedoActoAdministrativoAprobacion">
+            <summary>
+            N° GEDO Acto Administrativo aprobación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AmpliacionAdicional.BalanceEconomiasDemasias">
+            <summary>
+            Balance de Economías y Demasías
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.AnticipoFinanciero">
+            <summary>
+            27. Anticipo financiero.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.NumeroSolicitud">
+            <summary>
+            Valor alfanumérico que representa el Número de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.FechaSolicitud">
+            <summary>
+            Fecha de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.NumeroEE">
+            <summary>
+            Valor alfanumérico que representa el N° EE del trámite
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.MontoAnticipoFinancieroSolicitado">
+            <summary>
+            Valor numérico que representa el Monto de Anticipo Financiero solicitado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.ModalidadPagoAnticipoFinanciero">
+            <summary>
+            Combo que representa Modalidad de pago de anticipo financiero
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.FechaUltimoPago">
+            <summary>
+            Fecha de último pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.MontoPagado">
+            <summary>
+            Valor numérico que representa el Monto pagado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AnticipoFinanciero.FechaFirmaAutorizacionPago">
+            <summary>
+            Fecha de firma de la autorización del pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ApiLog.IdentityId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ApiLog.IdentityName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.AvanceFisico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AvanceFisico.AvanceFisicoCertificado">
+            <summary>
+            % de avance físico certificado.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.AvanceFisico.AvanceFisicoAcumulado">
+            <summary>
+            % de avance físico acumulado.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.NumeroCertificado">
+            <summary>
+            N° de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.TipoCertificado">
+            <summary>
+            Tipo de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.NumeroRedeterminacion">
+            <summary>
+            N° Redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.TipoProcedimientoRedeterminacion">
+            <summary>
+            Tipo de procedimiento de redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MesSaltoUltimaRedeterminacionAprobada">
+            <summary>
+            Mes de salto/disparo última redeterminación aprobada
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.AnioSaltoUltimaRedeterminacionAprobada">
+            <summary>
+            Año de salto/disparo última redeterminación aprobada
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.FechaInicioPeriodo">
+            <summary>
+            Fecha inicio período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.FechaFinPeriodo">
+            <summary>
+            Fecha fin período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoBrutoCertificadoAjusteRedeterminacion">
+            <summary>
+            Monto bruto del certificado de ajuste por redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoDeduccionFondoReparo">
+            <summary>
+            Monto deducción Fondo de Reparo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoCubiertoGarantiaFondoReparo">
+            <summary>
+            Monto cubierto por garantía de Fondo de Reparo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoDeduccionMultasSanciones">
+            <summary>
+            Monto deducción por multas o sanciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoOtrasDeducciones">
+            <summary>
+            Monto de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.DescripcionOtrasDeducciones">
+            <summary>
+            Descripción de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.MontoNetoCertificadoAjusteRedeterminacion">
+            <summary>
+            Monto neto del certificado de ajuste por redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.FechaFirmaAutorizacionPago">
+            <summary>
+            Fecha de firma de la autorización del pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.CertificadoAjusteRedeterminacion">
+            <summary>
+            Certificado de ajuste por redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAjusteRedeterminacion.PlanillaMedicionCertificadoAjusteRedeterminacion">
+            <summary>
+            Planilla de medición de certificado de ajuste por redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.NumeroCertificado">
+            <summary>
+            N° de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.NumeroDelEE">
+            <summary>
+            N° EE del trámite
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.TipoCertificado">
+            <summary>
+            Tipo de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.TipoPrecios">
+            <summary>
+            Tipo de precios
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.FechaInicioPeriodo">
+            <summary>
+            Fecha inicio período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.FechaFinPeriodo">
+            <summary>
+            Fecha fin período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoBrutoCertificadoPreciosBase">
+            <summary>
+            Monto bruto del certificado a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoDeduccionAnticipoFinanciero">
+            <summary>
+            Monto deducción Anticipo Financiero
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoDeduccionFondoReparoPreciosBase">
+            <summary>
+            Monto deducción Fondo de Reparo a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoCubiertoGarantiaFondoReparoPreciosBase">
+            <summary>
+            Monto cubierto por garantía de Fondo de Reparo a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoDeduccionMultasSanciones">
+            <summary>
+            Monto deducción por multas o sanciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoOtrasDeducciones">
+            <summary>
+            Monto de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.DescripcionOtrasDeducciones">
+            <summary>
+            Descripción de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoNetoCertificadoPreciosBase">
+            <summary>
+            Monto neto del certificado a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.FechaUltimoPago">
+            <summary>
+            Fecha de último pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.MontoPagado">
+            <summary>
+            Monto pagado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.FechaAprobacion">
+            <summary>
+            Fecha de aprobación (firma del acto administrativo)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.ActaMedicion">
+            <summary>
+            Acta de medición
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.RegistroFotografico">
+            <summary>
+            Registro fotográfico: ( permite varios archivos de este tipo, se genera un GEDO por cada archivo subido)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.CertificadoAvanceObra">
+            <summary>
+            Certificado de Avance de Obra 
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioBase.PlanillaMedicion">
+            <summary>
+            Planilla de medición
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.NumeroCertificado">
+            <summary>
+            N° de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.NumeroDelEE">
+            <summary>
+            N° EE del trámite
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.TipoCertificado">
+            <summary>
+            Tipo de certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.FechaInicioPeriodo">
+            <summary>
+            Fecha inicio período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.FechaFinPeriodo">
+            <summary>
+            Fecha fin período
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.TipoPrecios">
+            <summary>
+            Tipo de precios
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.NumeroRedeterminacion">
+            <summary>
+            N° redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.TipoProcedimiento">
+            <summary>
+            Tipo de procedimiento
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MesSaltoUltimaRedeterminacionAprobada">
+            <summary>
+            Mes de salto/disparo última redeterminación aprobada
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.AnioSaltoUltimaRedeterminacionAprobada">
+            <summary>
+            Año de salto/disparo última redeterminación aprobada
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoBrutoCertificadoPreciosBase">
+            <summary>
+            Monto bruto del certificado a precios base
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoDeduccionAnticipoFinanciero">
+            <summary>
+            Monto deducción Anticipo Financiero
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoBrutoCertificadoPreciosRedeterminados">
+            <summary>
+            Monto bruto del certificado a precios redeterminados
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoDeduccionFondoReparoPreciosRedeterminados">
+            <summary>
+            Monto deducción Fondo de Reparo a precios redeterminados
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoCubiertoGarantiaFondoReparoPreciosRedeterminados">
+            <summary>
+            Monto cubierto por garantía de Fondo de Reparo a precios redeterminados
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoDeduccionMultasSanciones">
+            <summary>
+            Monto deducción por multas o sanciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoOtrasDeducciones">
+            <summary>
+            Monto de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.DescripcionOtrasDeducciones">
+            <summary>
+            Descripción de otras deducciones
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoNetoCertificadoPreciosRedeterminados">
+            <summary>
+            Monto neto del certificado a precios redeterminados
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.NumeroGedoCertificadoAprobado">
+            <summary>
+            N° GEDO Certificado aprobado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.AvanceFisicoCertificado">
+            <summary>
+            % de avance físico certificado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.AvanceFisicoAcumulado">
+            <summary>
+            % de avance físico acumulado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.FechaFirmaAutorizacionPago">
+            <summary>
+            Fecha de firma de la autorización del pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.FechaUltimoPago">
+            <summary>
+            Fecha de último pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.TipoPago">
+            <summary>
+            Tipo de pago
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.MontoPagado">
+            <summary>
+            Monto pagado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.ActaMedicion">
+            <summary>
+            Acta de medición
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.RegistroFotografico">
+            <summary>
+            Registro fotográfico: ( permite varios archivos de este tipo, se genera un GEDO por cada archivo subido)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.CertificadoAvanceObra">
+            <summary>
+            Certificado de Avance de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.CertificacionAvancePrecioRedeterminado.PlanillaMedicion">
+            <summary>
+            Planilla de medición
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NombreFrenteObra">
+            <summary>
+            Valor alfanumérico que representa el Nombre del Frente de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NumeroFrenteObra">
+            <summary>
+            Valor alfanumérico que representa el Número del Frente de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NombreGrupoObraTipoProyecto">
+            <summary>
+            Valor alfanumérico que representa el Nombre Grupo de Obra y Tipo Proyecto
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NroGrupoObra">
+            <summary>
+            Valor alfanumérico que representa el Número Grupo de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.RazonSocial">
+            <summary>
+            Valor de cadena que representa la Razón Social
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NumeroCUIT">
+            <summary>
+            Valor alfanumérico que representa el Número de CUIT
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.IdentityBase.Id">
+            <summary>
+            Valor numérico de solo lectura que representa al Número de Operación 
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.IdentityBase.TipoEntidad">
+            <summary>
+            Valores: FrenteObra[1], DatosContrato[2]
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.IdentityBase.Numero">
+            <summary>
+            Cadena de caracteres que representan al Número Frente Obra o al Número de contrato 
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.IdentityBase.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ONC.RESTful.Entities.Obra.IdentityBase.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.PenalidadSancionAplicada">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PenalidadSancionAplicada.MotivoMultasSanciones">
+            <summary>
+            Motivo de multas o sanciones 
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PenalidadSancionAplicada.MontoMultas">
+            <summary>
+            Monto de las multas
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.NumeroSolicitud">
+            <summary>
+            Número de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.FechaSolicitud">
+            <summary>
+            Fecha de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.NumeroEE">
+            <summary>
+            N° EE del trámite
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.MotivoCausaModificacion">
+            <summary>
+            Motivo/Causa de la modificación de plan de trabajo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.FechaAprobacion">
+            <summary>
+            Fecha de aprobación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.PlanTrabajosOriginal">
+            <summary>
+            Plan de trabajos original (propuesta)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.CurvaCertificaciónOriginal">
+            <summary>
+            Curva de Certificación original (propuesta)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.PlanTrabajosReal">
+            <summary>
+            Plan de trabajos real (actualizada mes a mes)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.PlanTrabajoCurvaCertificacion.CurvaCertificaciónReal">
+            <summary>
+            Curva de Certificación real (actualizada mes a mes)
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.ProrrogaPlazo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.NumeroSolicitudModificacionObra">
+            <summary>
+            Número de solicitud de modificación de obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.FechaVigenteFinalizacion">
+            <summary>
+            Fecha vigente de finalización
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.CantidadPlazoEjecucionVigente">
+            <summary>
+            Cantidad del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.UnidadTiempoPlazoEjecucionVigente">
+            <summary>
+            Unidad de tiempo del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.MotivoCausaLaProrroga">
+            <summary>
+            Motivo/Causa de la prórroga
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.CantidadDiasPlazoProrrogaSolicitado">
+            <summary>
+            Cantidad de días de plazo de prórroga solicitado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.TipoDiasPlazoProrrogaSolicitado">
+            <summary>
+            Tipo de días de plazo de prórroga solicitado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.NuevaFechaFinalizacionObra">
+            <summary>
+            Nueva fecha de finalización de obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.CantidadDiasNuevoPlazoEjecucion">
+            <summary>
+            Cantidad de días de nuevo plazo de ejecución
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.TipoDiasNuevoPlazoEjecucion">
+            <summary>
+            Tipo de días de nuevo plazo de ejecución
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.NumeroGEDOActoAdministrativoAprobacion">
+            <summary>
+            N° GEDO Acto Administrativo aprobación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.FechaAprobacion">
+            <summary>
+            Fecha de aprobación (firma del acto administrativo)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.ActoAdministrativo">
+            <summary>
+            Acto Administrativo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.PlanTrabajosVigente">
+            <summary>
+            Plan de Trabajos vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ProrrogaPlazo.PlanTrabajosAprobado">
+            <summary>
+            Plan de Trabajos aprobado
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.TipoProcedimientoRedeterminacion">
+            <summary>
+            Tipo de procedimiento de redeterminación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.NumeroSolicitud">
+            <summary>
+            Número de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.FechaSolicitud">
+            <summary>
+            Fecha de solicitud
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.NumeroEETramite">
+            <summary>
+            N° EE del trámite
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.NuevoMontoContratoAprobado">
+            <summary>
+            Nuevo monto de contrato aprobado
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.VariacionContratoPeso">
+            <summary>
+            Variación del contrato ($)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.VariacionContratoPorcentaje">
+            <summary>
+            Variación del contrato (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.VariacionAcumuladaContratoPeso">
+            <summary>
+            Variación acumulada del contrato ($)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.VariacionAcumuladaContratoPorcentaje">
+            <summary>
+            Variación acumulada del contrato (%)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.FechaFirmaActa">
+            <summary>
+            Fecha de firma del Acta de Redeterminación de Precios con la contratista
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.FechaAprobacion">
+            <summary>
+            Fecha de aprobación (firma del acto administrativo)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.TablaVnr">
+            <summary>
+            Tabla VNR
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.ComputoPresupuestoVigente">
+            <summary>
+            Cómputo y presupuesto vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.ComputoPresupuestoConAdecuaciónProvisoria">
+            <summary>
+            Cómputo y presupuesto con adecuación provisoria/precios redeterminados
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.ActoAdministrativoAutorizaRedeterminacion">
+            <summary>
+            Acto Administrativo que autoriza redeterminación/adecuación provisoria
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.RedeterminacionPrecioTramiteAprobada.ActaRedeterminacionPreciosContratista">
+            <summary>
+            Acta de Redeterminación de Precios con la contratista
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.ResponsableTecnicoObra">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ResponsableTecnicoObra.Nombre">
+            <summary>
+            Cadena de caracteres que representa el Nombre
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ResponsableTecnicoObra.Titulo">
+            <summary>
+            Cadena de caracteres que representa el Titulo
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.ResponsableTecnicoObra.Matricula">
+            <summary>
+            Cadena de caracteres que representa la Matricula
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SubcontratistaAutorizado.NombreSubContratista">
+            <summary>
+            Nombre de la Sub Contratista
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SubcontratistaAutorizado.CUITSubContratista">
+            <summary>
+            CUIT de la Sub Contratista
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SubcontratistaAutorizado.Tarea">
+            <summary>
+            Tarea
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SubcontratistaAutorizado.RepresentanteTecnico">
+            <summary>
+            Representante Técnico
+            </summary>
+        </member>
+        <member name="T:ONC.RESTful.Entities.Obra.SuspensionObra">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.NumeroSolicitudSuspensionObra">
+            <summary>
+            Número de solicitud de modificación de obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.FechaVigenteFinalizacion">
+            <summary>
+            Fecha vigente de finalización
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.CantidadPlazoEjecucionVigente">
+            <summary>
+            Cantidad del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.UnidadTiempoPlazoEjecucionVigente">
+            <summary>
+            Unidad de tiempo del plazo de ejecución vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.MotivoCausaLaSuspension">
+            <summary>
+            Motivo/Causa de la suspensión
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.FechaInicioLaSuspension">
+            <summary>
+            Fecha de inicio de la suspensión
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.FechaReinicioObra">
+            <summary>
+            Fecha de reinicio de obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.FechaAprobacion">
+            <summary>
+            Fecha de aprobación (firma del acto administrativo)
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.PlazoSuspension">
+            <summary>
+            Plazo de suspensión
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.NuevaFechaFinalizacionLaObra">
+            <summary>
+            Nueva fecha de finalización de la obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.NumeroGEDOActoAdministrativoAprobacion">
+            <summary>
+            N° GEDO Acto Administrativo aprobación
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.ActaSuspensionNeutralizacion">
+            <summary>
+            Acta de suspensión/neutralización
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.PlanTrabajosVigente">
+            <summary>
+            Plan de Trabajos vigente
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.SuspensionObra.PlanTrabajosAprobado">
+            <summary>
+            Plan de Trabajos aprobado
+            </summary>
+        </member>
+    </members>
+</doc>

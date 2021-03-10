@@ -75,8 +75,11 @@
     <Compile Include="FeriadoService.cs" />
     <Compile Include="HistoricoService.cs" />
     <Compile Include="LoginService.cs" />
+    <Compile Include="Obra\CertificacionService.cs" />
     <Compile Include="Obra\FrenteObraService.cs" />
+    <Compile Include="Obra\ObraService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro\ProveedorService.cs" />
     <Compile Include="Security\TokenGenerator.cs" />
     <Compile Include="Security\TokenValidationHandler.cs" />
     <Compile Include="Utils\CustomExceptionFilter.cs" />

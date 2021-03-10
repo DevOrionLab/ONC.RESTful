@@ -1,16 +1,4 @@
-13/01/2021 15:36:32 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-13/01/2021 15:40:23 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-13/01/2021 15:40:53 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-13/01/2021 15:42:36 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
-13/01/2021 15:54:39 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-13/01/2021 17:51:50 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-14/01/2021 14:05:58 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-14/01/2021 14:53:49 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-14/01/2021 14:56:49 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-16/01/2021 16:30:12 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:02:16 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:48:52 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:50:05 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:53:06 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:55:36 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
-19/01/2021 14:57:46 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+10/03/2021 00:16:01 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+10/03/2021 00:16:02 | ONC.RESTful.Business.dll | <Create>b__0 | ONC.RESTful.Business.Obra.ObraComponent`1+<>c__DisplayClass6_0[T] | 58 | El campo TipoEntidad no es válido.
+10/03/2021 00:16:02 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | Se canceló una tarea.
+10/03/2021 00:24:18 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.

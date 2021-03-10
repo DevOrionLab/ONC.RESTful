@@ -57,7 +57,7 @@ namespace ONC.RESTful.Services.Http
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
             // *** Constructor
-            var isTesterValid = (login.Username == "constructor" && login.Password == "demo123");
+            var isTesterValid = (login.Username == "constructor" && login.Password == "qwerty");
             if (isTesterValid)
             {
                 var token = TokenGenerator.GenerateTokenJwt(login.Username, RolName.Constructor);
@@ -65,7 +65,7 @@ namespace ONC.RESTful.Services.Http
             }
 
             // *** Administrator
-            var isAdminValid = (login.Username == "admin" && login.Password == "demo123");
+            var isAdminValid = (login.Username == "admin" && login.Password == "qwerty");
             if (isAdminValid)
             {
                 var token = TokenGenerator.GenerateTokenJwt(login.Username, RolName.Administrator);

@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\bin\ONC.RESTful.Entities.xml</DocumentationFile>
+    <DocumentationFile>ONC.RESTful.Entities.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -41,10 +44,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiResult.cs" />
+    <Compile Include="Enums\TipoCertificado.cs" />
+    <Compile Include="Enums\TipoDia.cs" />
+    <Compile Include="Enums\TipoIncluyeProrrogaPlazo.cs" />
+    <Compile Include="Enums\TipoModalidadPagoAnticipo.cs" />
+    <Compile Include="Enums\TipoModificacion.cs" />
+    <Compile Include="Enums\TipoPago.cs" />
+    <Compile Include="Enums\TipoPrecio.cs" />
+    <Compile Include="Enums\TipoProcedimientoRedeterminacion.cs" />
     <Compile Include="Feriado.cs" />
     <Compile Include="Historico.cs" />
+    <Compile Include="Obra\ActaInicioObra.cs" />
+    <Compile Include="Obra\AmpliacionAdicional.cs" />
+    <Compile Include="Obra\AnticipoFinanciero.cs" />
+    <Compile Include="Obra\ApiLog.cs" />
+    <Compile Include="Obra\AvanceFisico.cs" />
+    <Compile Include="Obra\CertificacionAjusteRedeterminacion.cs" />
+    <Compile Include="Obra\CertificacionAvancePrecioBase.cs" />
+    <Compile Include="Obra\CertificacionAvancePrecioRedeterminado.cs" />
     <Compile Include="Obra\FrenteObraGetEstadoNumero.cs" />
+    <Compile Include="Obra\IdentityBase.cs" />
+    <Compile Include="Obra\PenalidadSancionAplicada.cs" />
+    <Compile Include="Obra\PlanTrabajoCurvaCertificacion.cs" />
+    <Compile Include="Obra\ProrrogaPlazo.cs" />
+    <Compile Include="Obra\RedeterminacionPrecioTramiteAprobada.cs" />
+    <Compile Include="Obra\ResponsableTecnicoObra.cs" />
+    <Compile Include="Obra\SubcontratistasAutorizado.cs" />
+    <Compile Include="Obra\SuspensionObra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ONC.RESTful.Framework\ONC.RESTful.Framework.csproj">
+      <Project>{02c71b70-5fd5-43e9-96b8-be8a0ab9b1d5}</Project>
+      <Name>ONC.RESTful.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

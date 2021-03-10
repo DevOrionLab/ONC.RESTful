@@ -72,9 +72,11 @@ namespace ONC.RESTful.Services.Http.Utils
                     break;
 
                 case "System.Data.SqlClient.SqlException":
-                    httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, "El servicio lanzó una SqlException no controlada.");
+                    httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, "SqlException. El servicio lanzó una SqlException no controlada.");
                     break;
-
+                case "System.Threading.Tasks.TaskCanceledException":
+                    httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, "TaskCanceledException. El servicio lanzó una SqlException no controlada.");
+                    break;
                 case "System.Data.Entity.Infrastructure.DbUpdateException":
                     httpResponseMessage = CreateHttpResponseMessage(context.Request, HttpStatusCode.InternalServerError, "Ha ocurrido un error. Por favor intente de nuevo.");
                     break;
