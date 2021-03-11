@@ -9,7 +9,7 @@ namespace ONC.RESTful.Data.EF6
     {
         public ApiDbContext() : base("name=ApiDbContext")
         {
-            // Database.SetInitializer<ApiDbContext>(null);
+            //Database.SetInitializer<ApiDbContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -38,7 +38,7 @@ namespace ONC.RESTful.Data.EF6
         public virtual DbSet<SubcontratistaAutorizado> SubcontratistaAutorizado { get; set; }
         public virtual DbSet<SuspensionObra> SuspensionObra { get; set; }
         public virtual DbSet<ApiLog> ApiLog { get; set; }
-        
+
 
 
     }

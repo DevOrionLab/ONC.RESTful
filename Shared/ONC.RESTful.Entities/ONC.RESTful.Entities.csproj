@@ -47,6 +47,7 @@
     <Compile Include="ApiResult.cs" />
     <Compile Include="Enums\TipoCertificado.cs" />
     <Compile Include="Enums\TipoDia.cs" />
+    <Compile Include="Enums\TipoEntidad.cs" />
     <Compile Include="Enums\TipoIncluyeProrrogaPlazo.cs" />
     <Compile Include="Enums\TipoModalidadPagoAnticipo.cs" />
     <Compile Include="Enums\TipoModificacion.cs" />

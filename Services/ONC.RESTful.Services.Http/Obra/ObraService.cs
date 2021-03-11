@@ -19,13 +19,13 @@ namespace ONC.RESTful.Services.Http
     /// 
     /// </summary>
     [RoutePrefix("api/obra")]
-    public class ObraService : ApiController
+    public class ObraService : BaseApiController
     {
         private readonly Random _random = new Random();
 
         #region ActaInicioObra
 
-        /// <summary><![CDATA[Método de negocio Task[Int32] Create(model).]]></summary>
+        /// <summary><![CDATA[Método de negocio Task[int] Create(model).]]></summary>
         /// <param name="model"> </param>
         /// <remarks>Agrega un nuevo objeto T:ActaInicioObra.</remarks>
         /// <returns></returns>
@@ -443,67 +443,6 @@ namespace ONC.RESTful.Services.Http
         }
         #endregion
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="model"></param>
-        /// <param name="numero"></param>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        private HttpResponseMessage HttpResponseMessageCreate(string model, string numero, int result)
-        {
-            if (result == Constants.EXIT_FAILURE)
-            {
-                var apiError = new ApiResult()
-                {
-                    Id = result,
-                    Message = $"No existe el frente de Obra: {numero}",
-                    Code = (HttpStatusCode)422
-                };
-                return Request.CreateResponse((HttpStatusCode)422, apiError);
-            }
-
-            if (result > 0)
-            {
-                var apiResult = new ApiResult()
-                {
-                    Id = result,
-                    Message = $"La operación fue llevada de manera exitosa.Datos de la entidad {model} enviada.",
-                    Code = HttpStatusCode.Created
-                };
-
-                return Request.CreateResponse(HttpStatusCode.Created, apiResult);
-            }
-
-            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found");
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        private HttpResponseMessage HttpResponseMessageResult<T>(T result)
-        {
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound,
-                    "No se puedo encontrar registros con el identificador señalado. Intente nuevamente.")
-                : Request.CreateResponse(OK, result);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        private HttpResponseMessage HttpResponseMessageResult<T>(List<T> result)
-        {
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound,
-                    "No se puedo encontrar registros con el identificador señalado. Intente nuevamente.")
-                : Request.CreateResponse(OK, result);
-        }
+        
     }
 }

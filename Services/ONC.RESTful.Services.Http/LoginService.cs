@@ -19,7 +19,7 @@ namespace ONC.RESTful.Services.Http
     /// </summary>
     [AllowAnonymous]
     [RoutePrefix("api/login")]
-    internal class LoginService : ApiController
+    public class LoginService : ApiController
     {
         /// <summary>
         /// 

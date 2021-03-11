@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Dashboard.cs" />
+    <Compile Include="BaseApiController.cs" />
     <Compile Include="FeriadoService.cs" />
     <Compile Include="HistoricoService.cs" />
     <Compile Include="LoginService.cs" />

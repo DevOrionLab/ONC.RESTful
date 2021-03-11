@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ONC.RESTful.Business.Obra;
@@ -11,7 +12,7 @@ using ONC.RESTful.Services.Http.Utils;
 namespace ONC.RESTful.Services.Http
 {
     [RoutePrefix("api/obra/certificacion")]
-    public class CertificacionService : ApiController
+    public class CertificacionService : BaseApiController
     {
         private readonly Random _random = new Random();
 
@@ -29,18 +30,10 @@ namespace ONC.RESTful.Services.Http
         [HttpPost]
         [Route("CertificacionAvancePrecioBase")]
         [ResponseType(typeof(CertificacionAvancePrecioBase))]
-        public HttpResponseMessage CertificacionAvancePrecioBase(CertificacionAvancePrecioBase model)
+        public async Task<HttpResponseMessage> CertificacionAvancePrecioBase(CertificacionAvancePrecioBase model)
         {
-            var result = new CertificacionAvancePrecioBase() { };
-            var apiResult = new ApiResult()
-            {
-                Id = _random.Next(1000),
-                Message = "CertificacionAvancePrecioBase creada.",
-                Code = HttpStatusCode.Created
-            };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.Created, apiResult);
+            var result = await ObraComponent<CertificacionAvancePrecioBase>.Instance.Create(model);
+            return HttpResponseMessageCreate(model.GetType().Name, model.Numero, result);
         }
 
         /// <summary>
@@ -56,12 +49,10 @@ namespace ONC.RESTful.Services.Http
         [HttpGet]
         [Route("GetCertificacionAvancePrecioBase")]
         [ResponseType(typeof(CertificacionAvancePrecioBase))]
-        public HttpResponseMessage GetCertificacionAvancePrecioBase(int id)
+        public async Task<HttpResponseMessage> GetCertificacionAvancePrecioBase(int id)
         {
-            var result = new CertificacionAvancePrecioBase() { };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.OK, result);
+            var result = await ObraComponent<CertificacionAvancePrecioBase>.Instance.GetById(id);
+            return HttpResponseMessageResult(result);
         }
         #endregion
 
@@ -79,18 +70,10 @@ namespace ONC.RESTful.Services.Http
         [HttpPost]
         [Route("CertificacionAvancePrecioRedeterminado")]
         [ResponseType(typeof(CertificacionAvancePrecioRedeterminado))]
-        public HttpResponseMessage CertificacionAvancePrecioRedeterminado(CertificacionAvancePrecioRedeterminado model)
+        public async Task<HttpResponseMessage> CertificacionAvancePrecioRedeterminado(CertificacionAvancePrecioRedeterminado model)
         {
-            var result = new CertificacionAvancePrecioRedeterminado() { };
-            var apiResult = new ApiResult()
-            {
-                Id = _random.Next(1000),
-                Message = "CertificacionAvancePrecioRedeterminado creada.",
-                Code = HttpStatusCode.Created
-            };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.Created, apiResult);
+            var result = await ObraComponent<CertificacionAvancePrecioRedeterminado>.Instance.Create(model);
+            return HttpResponseMessageCreate(model.GetType().Name, model.Numero, result);
         }
 
         /// <summary>
@@ -106,12 +89,10 @@ namespace ONC.RESTful.Services.Http
         [HttpGet]
         [Route("GetCertificacionAvancePrecioRedeterminado")]
         [ResponseType(typeof(CertificacionAvancePrecioRedeterminado))]
-        public HttpResponseMessage GetCertificacionAvancePrecioRedeterminado(int id)
+        public async Task<HttpResponseMessage> GetCertificacionAvancePrecioRedeterminado(int id)
         {
-            var result = new CertificacionAvancePrecioRedeterminado() { };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.OK, result);
+            var result = await ObraComponent<CertificacionAvancePrecioRedeterminado>.Instance.GetById(id);
+            return HttpResponseMessageResult(result);
         }
         #endregion
 
@@ -129,18 +110,10 @@ namespace ONC.RESTful.Services.Http
         [HttpPost]
         [Route("CertificacionAjusteRedeterminacion")]
         [ResponseType(typeof(CertificacionAjusteRedeterminacion))]
-        public HttpResponseMessage CertificacionAjusteRedeterminacion(CertificacionAjusteRedeterminacion model)
+        public async Task<HttpResponseMessage> CertificacionAjusteRedeterminacion(CertificacionAjusteRedeterminacion model)
         {
-            var result = new CertificacionAjusteRedeterminacion() { };
-            var apiResult = new ApiResult()
-            {
-                Id = _random.Next(1000),
-                Message = "CertificacionAjusteRedeterminacion creada.",
-                Code = HttpStatusCode.Created
-            };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.Created, apiResult);
+            var result = await ObraComponent<CertificacionAjusteRedeterminacion>.Instance.Create(model);
+            return HttpResponseMessageCreate(model.GetType().Name, model.Numero, result);
         }
 
         /// <summary>
@@ -156,12 +129,10 @@ namespace ONC.RESTful.Services.Http
         [HttpGet]
         [Route("GetCertificacionAjusteRedeterminacion")]
         [ResponseType(typeof(CertificacionAjusteRedeterminacion))]
-        public HttpResponseMessage GetCertificacionAjusteRedeterminacion(int id)
+        public async Task<HttpResponseMessage> GetCertificacionAjusteRedeterminacion(int id)
         {
-            var result = new CertificacionAjusteRedeterminacion() { };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.OK, result);
+            var result = await ObraComponent<CertificacionAjusteRedeterminacion>.Instance.GetById(id);
+            return HttpResponseMessageResult(result);
         }
         #endregion
 
@@ -179,18 +150,10 @@ namespace ONC.RESTful.Services.Http
         [HttpPost]
         [Route("PlanTrabajoCurvaCertificacion")]
         [ResponseType(typeof(PlanTrabajoCurvaCertificacion))]
-        public HttpResponseMessage PlanTrabajoCurvaCertificacion(PlanTrabajoCurvaCertificacion model)
+        public async Task<HttpResponseMessage> PlanTrabajoCurvaCertificacion(PlanTrabajoCurvaCertificacion model)
         {
-            var result = new PlanTrabajoCurvaCertificacion() { };
-            var apiResult = new ApiResult()
-            {
-                Id = _random.Next(1000),
-                Message = "PlanTrabajoCurvaCertificacion creada.",
-                Code = HttpStatusCode.Created
-            };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.Created, apiResult);
+            var result = await ObraComponent<PlanTrabajoCurvaCertificacion>.Instance.Create(model);
+            return HttpResponseMessageCreate(model.GetType().Name, model.Numero, result);
         }
 
         /// <summary>
@@ -206,12 +169,10 @@ namespace ONC.RESTful.Services.Http
         [HttpGet]
         [Route("GetPlanTrabajoCurvaCertificacion")]
         [ResponseType(typeof(PlanTrabajoCurvaCertificacion))]
-        public HttpResponseMessage GetPlanTrabajoCurvaCertificacion(int id)
+        public async Task<HttpResponseMessage> GetPlanTrabajoCurvaCertificacion(int id)
         {
-            var result = new PlanTrabajoCurvaCertificacion() { };
-            return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Found")
-                : Request.CreateResponse(HttpStatusCode.OK, result);
+            var result = await ObraComponent<PlanTrabajoCurvaCertificacion>.Instance.GetById(id);
+            return HttpResponseMessageResult(result);
         }
         #endregion
     }

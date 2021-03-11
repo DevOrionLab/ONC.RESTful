@@ -6,10 +6,4 @@
         Ajuste = 2,
         Otro = 3
     }
-
-    public enum TipoEntidad
-    {
-        FrenteObra = 1,
-        DatosContrato = 2
-    }
 }

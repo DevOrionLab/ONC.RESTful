@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ONC.RESTful.Entities.Enums;
 
 namespace ONC.RESTful.Entities.Obra
 {
@@ -15,7 +16,7 @@ namespace ONC.RESTful.Entities.Obra
         /// <summary>
         /// Tipo de procedimiento de redeterminación
         /// </summary>
-        [Required] public int TipoProcedimientoRedeterminacion { get; set; }
+        [Required] public TipoProcedimientoRedeterminacion TipoProcedimientoRedeterminacion { get; set; }
 
         /// <summary>
         /// Número de solicitud

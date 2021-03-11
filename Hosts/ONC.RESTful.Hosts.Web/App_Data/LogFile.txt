@@ -2,3 +2,11 @@
 10/03/2021 00:16:02 | ONC.RESTful.Business.dll | <Create>b__0 | ONC.RESTful.Business.Obra.ObraComponent`1+<>c__DisplayClass6_0[T] | 58 | El campo TipoEntidad no es válido.
 10/03/2021 00:16:02 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | Se canceló una tarea.
 10/03/2021 00:24:18 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+10/03/2021 12:54:11 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+10/03/2021 18:17:12 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+10/03/2021 20:41:29 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+11/03/2021 14:11:38 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+11/03/2021 14:37:19 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+11/03/2021 15:17:31 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+11/03/2021 15:25:53 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+11/03/2021 18:15:08 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.

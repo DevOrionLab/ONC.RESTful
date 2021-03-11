@@ -63,6 +63,7 @@
     <Compile Include="EF6\IDataService.cs" />
     <Compile Include="Feriado\FeriadoDAC.cs" />
     <Compile Include="HistoricoDAC.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Obra\FrenteObraDac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,7 +81,6 @@
       <Name>ONC.RESTful.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

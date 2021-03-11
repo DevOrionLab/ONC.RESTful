@@ -1,0 +1,256 @@
+﻿//JSON APIs Listado Decreto 1169_Datos Abiertos_MOP
+
+// ############# ObraService   #############
+
+//## T:ActaInicioObra
+{
+	"Fecha": "2020-07-08",
+	"ActaDeInicio": "06f877efdb5242b68ee4a5df0627c378",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:ResponsableTecnicoObra
+{
+	"Nombre": "Marcelo García",
+	"Titulo": "Tecnico de Obra Edificio Principal",
+	"Matricula": "5df06-27c378",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:AnticipoFinanciero
+{
+	"NumeroSolicitud": "36987",
+	"FechaSolicitud": "2021-03-10T12:54:11.592Z",
+	"NumeroEE": "74125",
+	"MontoAnticipoFinancieroSolicitado": "789888.89",
+	"ModalidadPagoAnticipoFinanciero": "Cheque",
+	"FechaUltimoPago": "2021-03-10T12:54:11.592Z",
+	"MontoPagado": "789654.23",
+	"FechaFirmaAutorizacionPago": "2021-03-10T12:54:11.592Z",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:AmpliacionesAdicionales
+{
+	"NumeroSolicitud": "85214",
+	"FechaVigenteFinalizacion": "2021-03-10T12:54:11.602Z",
+	"CantidadPlazoEjecucionVigente": "10",
+	"UnidadTiempoPlazoEjecucionVigente": "1",
+	"MontoOriginalContrato": "258741.33",
+	"TipoModificacion": "1",
+	"MotivoCausaModificacion": "Es este párrafo se detalla el motivo de la causa de motivación.",
+	"MontoVariacionContratoPreciosBase": "1234.33",
+	"VariacionContratoPreciosBase": "5678.77",
+	"NuevoMontoContratoAprobado": "91011.12",
+	"VariacionPorEconomias": "1234.33",
+	"VariacionPorDemasiasAdicionales": "5678.77",
+	"VariacionAcumuladaContratoPreciosBase": "91011.12",
+	"FechaAprobacion": "2021-03-10T12:54:11.602Z",
+	"IncluyeProrrogaPlazo": "0",
+	"CantidadDiasPlazoProrroga": 10,
+	"TipoDiasPlazoProrroga": "1",
+	"NuevaFechaFinalizacionObra": "2021-03-10T12:54:11.602Z",
+	"NuevoPlazoEjecucionObra": 40,
+	"NuevoTipoPlazoEjecucionObra": "1",
+	"NumeroGedoActoAdministrativoAprobacion": "GEDO-7896",
+	"BalanceEconomiasDemasias": "Detalles del balance de economías y demasías.",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:ProrrogaPlazo
+{
+	"NumeroSolicitudModificacionObra": "25874",
+	"FechaVigenteFinalizacion": "2021-03-10T12:54:11.616Z",
+	"CantidadPlazoEjecucionVigente": 10,
+	"UnidadTiempoPlazoEjecucionVigente": "1",
+	"MotivoCausaLaProrroga": "Es este párrafo se detalla el motivo de la causa de la Prorroga.",
+	"CantidadDiasPlazoProrrogaSolicitado": 20,
+	"TipoDiasPlazoProrrogaSolicitado": "1",
+	"NuevaFechaFinalizacionObra": "2021-03-10T12:54:11.616Z",
+	"CantidadDiasNuevoPlazoEjecucion": 0,
+	"TipoDiasNuevoPlazoEjecucion": "1",
+	"NumeroGEDOActoAdministrativoAprobacion": "GEDO-7899",
+	"FechaAprobacion": "2021-03-10T12:54:11.616Z",
+	"ActoAdministrativo": "AA-24f487d4c6ca456a989ac3aacf0eba62",
+	"PlanTrabajosVigente": "PTV-24f487d4c6ca456a989ac3aacf0eba62",
+	"PlanTrabajosAprobado": "PTA-24f487d4c6ca456a989ac3aacf0eba62",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:SuspensionObra
+{
+	"NumeroSolicitudSuspensionObra": "456789",
+	"FechaVigenteFinalizacion": "2021-03-10T12:54:11.616Z",
+	"CantidadPlazoEjecucionVigente": "10",
+	"UnidadTiempoPlazoEjecucionVigente": "1",
+	"MotivoCausaLaSuspension": "Es este párrafo se detalla el motivo de la causa de la Suspension.",
+	"FechaInicioLaSuspension": "2021-03-10T12:54:11.635Z",
+	"FechaReinicioObra": "2021-03-10T12:54:11.635Z",
+	"FechaAprobacion": "2021-03-10T12:54:11.635Z",
+	"PlazoSuspension": "10",
+	"NuevaFechaFinalizacionLaObra": "2021-03-10T12:54:11.635Z",
+	"NumeroGEDOActoAdministrativoAprobacion": "GEDO-7899",
+	"ActaSuspensionNeutralizacion": "ASN-f1842bfe21be443fb731c11c5827b05f",
+	"PlanTrabajosVigente": "PTV-f1842bfe21be443fb731c11c5827b05f",
+	"PlanTrabajosAprobado": "PTA-f1842bfe21be443fb731c11c5827b05f",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:SubcontratistasAutorizado
+{
+	"NombreSubContratista": "Juan García",
+	"CUITSubContratista": "307896541231",
+	"Tarea": "Corrección de tubos.",
+	"RepresentanteTecnico": "Adrián Pérez",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:AvanceFisico
+{
+	"AvanceFisicoCertificado": "123546.89",
+	"AvanceFisicoAcumulado": "584253.55",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:RedeterminacionPrecioTramiteAprobada
+{
+	"TipoProcedimientoRedeterminacion": "1",
+	"NumeroSolicitud": "52874",
+	"FechaSolicitud": "2021-03-10T12:54:11.669Z",
+	"NumeroEETramite": "GEDO-7899",
+	"NuevoMontoContratoAprobado": "789654.56",
+	"VariacionContratoPeso": "789654.56",
+	"VariacionContratoPorcentaje": "789654.56",
+	"VariacionAcumuladaContratoPeso": "789654.56",
+	"VariacionAcumuladaContratoPorcentaje": 0,
+	"FechaFirmaActa": "2021-03-10T12:54:11.669Z",
+	"FechaAprobacion": "2021-03-10T12:54:11.669Z",
+	"TablaVnr": "VNR-5a1caca716b64cb39cd254d1f8f32138",
+	"ComputoPresupuestoVigente": "CPV-5a1caca716b64cb39cd254d1f8f32138",
+	"ComputoPresupuestoConAdecuaciónProvisoria": "CPAP-5a1caca716b64cb39cd254d1f8f32138",
+	"ActoAdministrativoAutorizaRedeterminacion": "AAAR-5a1caca716b64cb39cd254d1f8f32138",
+	"ActaRedeterminacionPreciosContratista": "ARPC-5a1caca716b64cb39cd254d1f8f32138",
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+//## T:PenalidadSancionAplicada
+{
+	"MotivoMultasSanciones": "Es este párrafo se detalla el motivo de la Multas y Sanciones.",
+	"MontoMultas": 100,
+	"TipoEntidad": "1",
+	"Numero": "81-0001-FDO18"
+}
+
+
+// #############   CertificacionService   #############
+
+//## T:CertificacionAvancePrecioBase
+{
+  "NumeroCertificado": "852963",
+  "NumeroDelEE": "EE-7899",
+  "TipoCertificado": "1",
+  "TipoPrecios": "1",
+  "FechaInicioPeriodo": "2021-03-10T20:41:30.083Z",
+  "FechaFinPeriodo": "2021-03-10T20:41:30.083Z",
+  "MontoBrutoCertificadoPreciosBase": "247852.12",
+  "MontoDeduccionAnticipoFinanciero": "347852.12",
+  "MontoDeduccionFondoReparoPreciosBase": "337852.12",
+  "MontoCubiertoGarantiaFondoReparoPreciosBase": "347852.12",
+  "MontoDeduccionMultasSanciones": "457852.12",
+  "MontoOtrasDeducciones": "467852.12",
+  "DescripcionOtrasDeducciones": "Es este párrafo se detalla la descripción de otras deducciones.",
+  "MontoNetoCertificadoPreciosBase": "697852.12",
+  "FechaUltimoPago": "2021-03-10T20:41:30.083Z",
+  "MontoPagado": "707852.12",
+  "FechaAprobacion": "2021-03-10T20:41:30.083Z",
+  "ActaMedicion": "dd69a7015bff4a4f9985eba209906817",
+  "RegistroFotografico": "82b4fa5a44a44459b5be3c0d52514917",
+  "CertificadoAvanceObra": "3ee79689a34a4eaa8935c5e408a46049",
+  "PlanillaMedicion": "37517f6286444be68db2f372fc0bfff9",
+  "TipoEntidad": "1",
+  "Numero": "81-0001-FDO18"
+}
+
+//## T:CertificacionAvancePrecioRedeterminado
+{  
+  "NumeroCertificado": "18523",
+  "NumeroDelEE": "EE-96325",
+  "TipoCertificado": "1",
+  "FechaInicioPeriodo": "2021-03-10T20:41:30.101Z",
+  "FechaFinPeriodo": "2021-03-10T20:41:30.101Z",
+  "TipoPrecios": "1",
+  "NumeroRedeterminacion": "707852.12",
+  "TipoProcedimiento": "1",
+  "MesSaltoUltimaRedeterminacionAprobada": "707852.12",
+  "AnioSaltoUltimaRedeterminacionAprobada": "2021-03-10T20:41:30.101Z",
+  "MontoBrutoCertificadoPreciosBase": "707852.12",
+  "MontoDeduccionAnticipoFinanciero": "707852.12",
+  "MontoBrutoCertificadoPreciosRedeterminados": "707852.12",
+  "MontoDeduccionFondoReparoPreciosRedeterminados": "707852.12",
+  "MontoCubiertoGarantiaFondoReparoPreciosRedeterminados": "707852.12",
+  "MontoDeduccionMultasSanciones": "707852.12",
+  "MontoOtrasDeducciones": "707852.12",
+  "DescripcionOtrasDeducciones": "Es este párrafo se detalla la descripción de otras deducciones.",
+  "MontoNetoCertificadoPreciosRedeterminados": "707852.12",
+  "NumeroGedoCertificadoAprobado": "GEDO-96325",
+  "AvanceFisicoCertificado": "707852.12",
+  "AvanceFisicoAcumulado": "707852.12",
+  "FechaFirmaAutorizacionPago": "2021-03-10T20:41:30.101Z",
+  "FechaUltimoPago": "2021-03-10T20:41:30.101Z",
+  "TipoPago": "1",
+  "MontoPagado": "707852.12",
+  "ActaMedicion": "dd69a7015bff4a4f9985eba209906817",
+  "RegistroFotografico": "82b4fa5a44a44459b5be3c0d52514917",
+  "CertificadoAvanceObra": "3ee79689a34a4eaa8935c5e408a46049",
+  "PlanillaMedicion": "37517f6286444be68db2f372fc0bfff9",
+  "TipoEntidad": "1",
+  "Numero": "81-0001-FDO18"
+}
+
+//## T:CertificacionAjusteRedeterminacion
+{
+  "NumeroCertificado": "18523",
+  "TipoCertificado": "1",
+  "NumeroRedeterminacion": "45877",
+  "TipoProcedimientoRedeterminacion": "1",
+  "MesSaltoUltimaRedeterminacionAprobada": 3,
+  "AnioSaltoUltimaRedeterminacionAprobada": 2020,
+  "FechaInicioPeriodo": "2021-03-11T15:25:53.823Z",
+  "FechaFinPeriodo": "2021-03-11T15:25:53.823Z",
+  "MontoBrutoCertificadoAjusteRedeterminacion": "707852.12",
+  "MontoDeduccionFondoReparo": "707852.12",
+  "MontoCubiertoGarantiaFondoReparo": "707852.12",
+  "MontoDeduccionMultasSanciones": "707852.12",
+  "MontoOtrasDeducciones": "707852.12",
+  "DescripcionOtrasDeducciones": "Es este párrafo se detalla la descripción de otras deducciones.",
+  "MontoNetoCertificadoAjusteRedeterminacion": "707852.12",
+  "FechaFirmaAutorizacionPago": "2021-03-11T15:25:53.823Z",
+  "CertificadoAjusteRedeterminacion": "37517f6286444be68db2f372fc0bfff9",
+  "PlanillaMedicionCertificadoAjusteRedeterminacion": "37517f6286444be68db2f372fc0bfff9",
+  "TipoEntidad": "1",
+  "Numero": "81-0001-FDO18"
+}
+
+//## T:PlanTrabajoCurvaCertificacion
+{
+  "NumeroSolicitud": "852963",
+  "FechaSolicitud": "2021-03-11T15:25:53.834Z",
+  "NumeroEE": "EE-7899",
+  "MotivoCausaModificacion": "Es este párrafo se detalla el motivo de la causa de motivación.",
+  "FechaAprobacion": "2021-03-11T15:25:53.834Z",
+  "PlanTrabajosOriginal": "dd69a7015bff4a4f9985eba209906817",
+  "CurvaCertificaciónOriginal": "82b4fa5a44a44459b5be3c0d52514917",
+  "PlanTrabajosReal": "3ee79689a34a4eaa8935c5e408a46049",
+  "CurvaCertificaciónReal": "37517f6286444be68db2f372fc0bfff9",
+  "TipoEntidad": "1",
+  "Numero": "81-0001-FDO18"
+}

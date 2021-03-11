@@ -12,8 +12,6 @@ namespace ONC.RESTful.Entities.Obra
     public class CertificacionAvancePrecioRedeterminado : IdentityBase
     {
 
-        public int Id { get; set; }
-
         /// <summary>
         /// N° de certificado
         /// </summary>

@@ -17,12 +17,12 @@ namespace ONC.RESTful.Entities.Obra
         /// <summary>
         /// Fecha vigente de finalización
         /// </summary>
-        public string FechaVigenteFinalizacion { get; set; }
+        public DateTime FechaVigenteFinalizacion { get; set; }
 
         /// <summary>
         /// Cantidad del plazo de ejecución vigente
         /// </summary>
-        public string CantidadPlazoEjecucionVigente { get; set; }
+        public int CantidadPlazoEjecucionVigente { get; set; }
 
         /// <summary>
         /// Unidad de tiempo del plazo de ejecución vigente
@@ -52,7 +52,7 @@ namespace ONC.RESTful.Entities.Obra
         /// <summary>
         /// Plazo de suspensión
         /// </summary>
-        public string PlazoSuspension { get; set; }
+        public int PlazoSuspension { get; set; }
 
         /// <summary>
         /// Nueva fecha de finalización de la obra
