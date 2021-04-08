@@ -24,33 +24,51 @@ namespace ONC.RESTful.Business.Obra
         /// <param name="estado"> Valor numérico que representa el Estado del FrenteObra.</param>
         /// <param name="numero"> Valor alfanumérioco que representa el Número del FrenteObra.</param>
         /// <returns>Devuelve un objeto FrenteObraGetEstadoNumero.</returns>
-        public FrenteObraGetEstadoNumero Find(int estado, string numero)
+        public dynamic FdoByEstadoAndNumero(string numero, int estado)
         {
-            var result = default(FrenteObraGetEstadoNumero);
+            //var result = default(FrenteObraGetEstadoNumero);
 
             // Declaracion del componente de acceso a datos.
             var dac = new FrenteObraDac();
 
             // Paso 1: llamar a SelectByEstadoAndNumero en FrenteObraDac.
-            result = dac.SelectByEstadoAndNumero(estado, numero);
+            var result = dac.SelectByEstadoAndNumero(numero, estado);
             return result;
         }
 
         /// <summary>
-        /// 
+        /// Contrato vigente: mayor id y estado > 3
+        /// Contrato original: menor id y estado > 3
         /// </summary>
-        /// <param name="estado"></param>
         /// <param name="numero"></param>
-        /// <returns></returns>
-        public dynamic FindToExpando(int estado, string numero)
+        /// <returns>ObDevuelve un objeto FrenteObra detallado </returns>
+        public dynamic FdoDetalladoPorNumero(string numero)
         {
-            var result = default(dynamic);
-
-            // Declaracion del componente de acceso a datos.
             var dac = new FrenteObraDac();
 
-            // Paso 1: llamar a SelectByEstadoAndNumeroToExpando en FrenteObraDac.
-            result = dac.SelectByEstadoAndNumeroToExpando(estado, numero);
+            // Paso 1: llamar a SelectByNumeroToExpando en FrenteObraDac.
+            var result = dac.SelectByNumeroToExpando(numero);
+
+            var contratoVigente = result.First();
+            var contratoOriginal = result.Last();
+
+            contratoVigente.NumeroContratoOriginal = contratoOriginal.NumeroContratoVigente;
+            contratoVigente.MontoOriginalContrato = contratoOriginal.MontoVigenteContratoPrecioBase;
+            contratoVigente.FechaPerfeccionamientoContratoOriginal = contratoOriginal.FechaPerfeccionamiento;
+
+            ((IDictionary<string, object>)contratoVigente).Remove("FechaPerfeccionamiento");
+            ((IDictionary<string, object>)contratoVigente).Remove("EstadoDocumentoContractual");
+
+            return contratoVigente;
+        }
+
+        public object FdoPorNumeroContrato(string numeroContrato)
+        {
+            var dac = new FrenteObraDac();
+
+            // Paso 1: llamar a SelectByNumeroToExpando en FrenteObraDac.
+            var result = dac.SelectByNumeroContratoToExpando(numeroContrato);
+
             return result;
         }
     }

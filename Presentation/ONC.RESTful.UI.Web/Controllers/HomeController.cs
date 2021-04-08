@@ -32,7 +32,7 @@ namespace ONC.RESTful.UI.Web.Controllers
         {
             var op = new ObraProcess();
             var result = op.GetObjectFrenteObraByEstadoAndNumero(3, "81-0001-FDO18");
-            var list = new List<FrenteObraGetEstadoNumero>() { result };
+            var list = new List<FdoNumero>() { result };
             return View(list);
         }
     }

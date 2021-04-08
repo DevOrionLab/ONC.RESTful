@@ -20,32 +20,24 @@ namespace ONC.RESTful.Data.Obra
         /// <param name="estado"> Valor numérico que representa el Estado del Frente de Obra.</param>
         /// <param name="numero"> Valor alfanumérico que representa el Número del Frente de Obra.</param>
         /// <returns>Devuelve un objeto FrenteObraGetEstadoNumero.</returns>
-        public FrenteObraGetEstadoNumero SelectByEstadoAndNumero(int estado, string numero)
+        public dynamic SelectByEstadoAndNumero(string numero, int estado)
         {
-            const string SQL_STATEMENT =
-                "SELECT NombreFrenteObra, NumeroFrenteObra, NombreObra as NombreGrupoObra_tipoProyecto, NumeroObra as NroGrupoObra,   RazonSocial,  NumeroCUIT " +
-                "FROM OBRA.FrenteObra " +
-                "INNER JOIN OBRA.FrenteObraDatosGenerales ON OBRA.FrenteObra.IdDatosGenerales = OBRA.FrenteObraDatosGenerales.Id " +
-                "INNER JOIN OBRA.Obra ON OBRA.FrenteObra.IdObra = OBRA.Obra.Id " +
-                "INNER JOIN OBRA.ObraDatosGenerales ON OBRA.ObraDatosGenerales.Id = OBRA.Obra.IdObraDatosGenerales " +
-                "INNER JOIN RPP.Proveedor ON OBRA.FrenteObra.IdContratista = RPP.Proveedor.IdProveedor " +
-                "INNER JOIN RPP.Empresa ON RPP.Proveedor.IdEmpresa = RPP.Empresa.IdEmpresa " +
-                "WHERE OBRA.FrenteObra.EstadoFrenteObra=@estado AND NumeroFrenteObra =@numero";
+            const string SQL_STATEMENT = "[OBRA_SelectFrenteObraByNumeroAndEstado]";
 
-            FrenteObraGetEstadoNumero result = null;
+            dynamic result = null;
 
             // Conexión a la base de datos.
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
-            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            using (var cmd = db.GetStoredProcCommand(SQL_STATEMENT))
             {
-                db.AddInParameter(cmd, "@estado", DbType.Int32, estado);
                 db.AddInParameter(cmd, "@numero", DbType.String, numero);
+                db.AddInParameter(cmd, "@estado", DbType.Int32, estado);
 
-                using (IDataReader dr = db.ExecuteReader(cmd))
+                using (var dr = db.ExecuteReader(cmd))
                 {
                     if (dr.Read())
                     {
-                        result = ParseFrenteObraGetEstadoNumero(dr);
+                        result = dr.ToExpando();
                     }
                 }
             }
@@ -82,33 +74,53 @@ namespace ONC.RESTful.Data.Obra
         }
 
         /// <summary>
-        /// OBRA.FrenteObra.EstadoFrenteObra = 3  AND NumeroFrenteObra = '81-0001-FDO18'
+        /// OBRA.FrenteObra.NumeroFrenteObra
         /// </summary>
-        /// <param name="estado"> Valor numérico que representa el Estado del Frente de Obra.</param>
         /// <param name="numero"> Valor alfanumérico que representa el Número del Frente de Obra.</param>
         /// <returns>Devuelve un objeto dynamic.</returns>
-        public dynamic SelectByEstadoAndNumeroToExpando(int estado, string numero)
+        public List<dynamic> SelectByNumeroToExpando(string numero)
         {
-            const string SQL_STATEMENT =
-                "SELECT NombreFrenteObra, NumeroFrenteObra, NombreObra as NombreGrupoObra_tipoProyecto, NumeroObra as NroGrupoObra,   RazonSocial,  NumeroCUIT " +
-                "FROM OBRA.FrenteObra " +
-                "INNER JOIN OBRA.FrenteObraDatosGenerales ON OBRA.FrenteObra.IdDatosGenerales = OBRA.FrenteObraDatosGenerales.Id " +
-                "INNER JOIN OBRA.Obra ON OBRA.FrenteObra.IdObra = OBRA.Obra.Id " +
-                "INNER JOIN OBRA.ObraDatosGenerales ON OBRA.ObraDatosGenerales.Id = OBRA.Obra.IdObraDatosGenerales " +
-                "INNER JOIN RPP.Proveedor ON OBRA.FrenteObra.IdContratista = RPP.Proveedor.IdProveedor " +
-                "INNER JOIN RPP.Empresa ON RPP.Proveedor.IdEmpresa = RPP.Empresa.IdEmpresa " +
-                "WHERE OBRA.FrenteObra.EstadoFrenteObra=@estado AND NumeroFrenteObra =@numero";
+            const string SQL_STATEMENT = "[OBRA_SelectFrenteObraByNumero]";
 
-            dynamic result = null;
-
+            var result = new List<dynamic>();
             // Conexión a la base de datos.
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
-            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            using (var cmd = db.GetStoredProcCommand(SQL_STATEMENT))
             {
-                db.AddInParameter(cmd, "@estado", DbType.Int32, estado);
                 db.AddInParameter(cmd, "@numero", DbType.String, numero);
+                using (var dr = db.ExecuteReader(cmd))
+                {
+                    while (dr.Read())
+                    {
+                        var item = dr.ToExpando();
+                        result.Add(item);
+                    }
+                }
+            }
+            return result;
+        }
 
-                using (IDataReader dr = db.ExecuteReader(cmd))
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
+        public dynamic SelectByNumeroContratoToExpando(string numeroContrato)
+        {
+            const string SQL_STATEMENT =
+                "SELECT NumeroFrenteObra, NombreFrenteObra,NumeroObra, GrupoObra,TipoProyectoObra, razonSocialProveedor , cuitProveedor, numeroContrato FROM " +
+                "OBRA.FrenteObra INNER JOIN OBRA.Obra ON OBRA.FrenteObra.IdObra = OBRA.Obra.Id INNER JOIN " +
+                "OBRA.ObraDatosGenerales ON OBRA.Obra.IdObraDatosGenerales = OBRA.ObraDatosGenerales.Id INNER JOIN " +
+                "OC.DocumentoContractual ON OBRA.FrenteObra.Id = OC.DocumentoContractual.IdFrenteObra AND OBRA.FrenteObra.Id = OC.DocumentoContractual.IdFrenteObra	" +
+                "WHERE 	NumeroContrato = @numeroContrato";
+
+            dynamic result = null;
+            // Conexión a la base de datos.
+            var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (var cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                db.AddInParameter(cmd, "@numeroContrato", DbType.String, numeroContrato);
+                using (var dr = db.ExecuteReader(cmd))
                 {
                     if (dr.Read())
                     {
@@ -116,7 +128,6 @@ namespace ONC.RESTful.Data.Obra
                     }
                 }
             }
-
             return result;
         }
 
@@ -125,17 +136,18 @@ namespace ONC.RESTful.Data.Obra
         /// </summary>
         /// <param name="dr"></param>
         /// <returns></returns>
-        private FrenteObraGetEstadoNumero ParseFrenteObraGetEstadoNumero(IDataReader dr)
+        private FdoNumero ParseFrenteObraGetEstadoNumero(IDataReader dr)
         {
-            var result = new FrenteObraGetEstadoNumero();
-
-            // Leer valores.
-            result.NombreFrenteObra = GetDataValue<string>(dr, "NombreFrenteObra");
-            result.NumeroFrenteObra = GetDataValue<string>(dr, "NumeroFrenteObra");
-            result.NombreGrupoObraTipoProyecto = GetDataValue<string>(dr, "NombreGrupoObra_tipoProyecto");
-            result.NroGrupoObra = GetDataValue<string>(dr, "NroGrupoObra");
-            result.RazonSocial = GetDataValue<string>(dr, "RazonSocial");
-            result.NumeroCUIT = GetDataValue<string>(dr, "NumeroCUIT");
+            var result = new FdoNumero
+            {
+                NombreFrenteObra = GetDataValue<string>(dr, "NombreFrenteObra"),
+                NumeroFrenteObra = GetDataValue<string>(dr, "NumeroFrenteObra"),
+                NumeroObra = GetDataValue<string>(dr, "NumeroObra"),
+                TipoProyectoObra = GetDataValue<string>(dr, "TipoProyectoObra"),
+                GrupoObra = GetDataValue<string>(dr, "GrupoObra"),
+                RazonSocial = GetDataValue<string>(dr, "RazonSocial"),
+                NumeroCUIT = GetDataValue<string>(dr, "NumeroCUIT")
+            };
 
             return result;
         }

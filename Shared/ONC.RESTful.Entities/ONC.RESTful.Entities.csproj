@@ -64,6 +64,7 @@
     <Compile Include="Obra\CertificacionAjusteRedeterminacion.cs" />
     <Compile Include="Obra\CertificacionAvancePrecioBase.cs" />
     <Compile Include="Obra\CertificacionAvancePrecioRedeterminado.cs" />
+    <Compile Include="Obra\FdoDetalladoPorNumero.cs" />
     <Compile Include="Obra\FrenteObraGetEstadoNumero.cs" />
     <Compile Include="Obra\IdentityBase.cs" />
     <Compile Include="Obra\PenalidadSancionAplicada.cs" />

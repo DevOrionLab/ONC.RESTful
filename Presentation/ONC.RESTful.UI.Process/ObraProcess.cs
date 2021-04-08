@@ -31,14 +31,14 @@ namespace ONC.RESTful.UI.Process
         /// <param name="estado"></param>
         /// <param name="numero"></param>
         /// <returns></returns>
-        public FrenteObraGetEstadoNumero GetObjectFrenteObraByEstadoAndNumero(int estado, string numero)
+        public FdoNumero GetObjectFrenteObraByEstadoAndNumero(int estado, string numero)
         {
             var parameters = new Dictionary<string, object>
             {
                 {"estado", estado},
                 {"numero", numero}
             };
-            var response = HttpGet<FrenteObraGetEstadoNumero>("/api/FrenteObra/GetFrenteObraByEstadoAndNumero", parameters, MediaType.Json);
+            var response = HttpGet<FdoNumero>("/api/FrenteObra/GetFrenteObraByEstadoAndNumero", parameters, MediaType.Json);
             return response;
         }
     }

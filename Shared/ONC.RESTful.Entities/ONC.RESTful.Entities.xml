@@ -589,32 +589,57 @@
             Planilla de medición
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NombreFrenteObra">
+        <member name="T:ONC.RESTful.Entities.Obra.FdoDetalladoPorNumero">
             <summary>
-            Valor alfanumérico que representa el Nombre del Frente de Obra
+            
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NumeroFrenteObra">
+        <member name="P:ONC.RESTful.Entities.Obra.FdoDetalladoPorNumero.NumeroFrenteObra">
             <summary>
             Valor alfanumérico que representa el Número del Frente de Obra
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NombreGrupoObraTipoProyecto">
+        <member name="P:ONC.RESTful.Entities.Obra.FdoDetalladoPorNumero.NombreFrenteObra">
             <summary>
-            Valor alfanumérico que representa el Nombre Grupo de Obra y Tipo Proyecto
+            Valor alfanumérico que representa el Nombre del Frente de Obra
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NroGrupoObra">
+        <member name="T:ONC.RESTful.Entities.Obra.FdoNumero">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.NumeroFrenteObra">
+            <summary>
+            Valor alfanumérico que representa el Número del Frente de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.NombreFrenteObra">
+            <summary>
+            Valor alfanumérico que representa el Nombre del Frente de Obra
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.NumeroObra">
             <summary>
             Valor alfanumérico que representa el Número Grupo de Obra
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.RazonSocial">
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.GrupoObra">
+            <summary>
+            Valor alfanumérico que representa el Nombre Grupo de Obra.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.TipoProyectoObra">
+            <summary>
+            Valor alfanumérico que representa el TipoProyectoObra.
+            </summary>
+        </member>
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.RazonSocial">
             <summary>
             Valor de cadena que representa la Razón Social
             </summary>
         </member>
-        <member name="P:ONC.RESTful.Entities.Obra.FrenteObraGetEstadoNumero.NumeroCUIT">
+        <member name="P:ONC.RESTful.Entities.Obra.FdoNumero.NumeroCUIT">
             <summary>
             Valor alfanumérico que representa el Número de CUIT
             </summary>
