@@ -2,3 +2,45 @@
 08/04/2021 20:27:00 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | Incorrect syntax near ','.
 08/04/2021 20:27:18 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
 08/04/2021 20:31:26 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:00:33 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:01:03 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'.
+Nombre del parámetro: key
+15/04/2021 19:01:30 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'.
+Nombre del parámetro: key
+15/04/2021 19:01:55 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:04:08 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:09:39 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:12:43 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:16:05 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:17:30 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:21:38 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:22:59 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:51:10 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 19:53:38 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:00:50 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:02:52 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:05:23 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:06:57 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:08:16 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se ha encontrado la ruta de acceso de la red
+15/04/2021 20:08:40 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se ha encontrado la ruta de acceso de la red
+15/04/2021 20:08:50 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se ha encontrado la ruta de acceso de la red
+15/04/2021 20:09:21 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se ha encontrado la ruta de acceso de la red
+15/04/2021 20:09:41 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:12:11 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:15:24 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:33:09 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:35:44 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:39:11 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 20:40:06 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 21:10:56 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+15/04/2021 21:49:08 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se ha encontrado la ruta de acceso de la red
+16/04/2021 14:10:31 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:11:31 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:30:41 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:32:41 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:33:51 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:35:21 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:35:26 | ONC.RESTful.Services.Http.dll | OnException | ONC.RESTful.Services.Http.Utils.CustomExceptionFilter | 50 | No se puede convertir un objeto de tipo 'System.Net.Http.HttpResponseMessage' al tipo 'System.Web.Http.IHttpActionResult'.
+16/04/2021 14:38:41 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:39:21 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.
+16/04/2021 14:40:42 | ONC.RESTful.Hosts.Web.dll | Application_Start | ONC.RESTful.Hosts.Web.Global | 18 | Inicio módulo de bitácoras.

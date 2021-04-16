@@ -22,7 +22,7 @@ namespace ONC.RESTful.Services.Http
     /// <summary>
     /// FrenteObra HTTP service controller.
     /// </summary>
-    // [Authorize(Roles = "Constructor")]
+    [Authorize(Roles = "Constructor")]
     [RoutePrefix("api/frenteObra")]
     public class FrenteObraService : ApiController
     {

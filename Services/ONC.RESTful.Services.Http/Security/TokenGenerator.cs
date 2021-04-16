@@ -25,17 +25,22 @@ namespace ONC.RESTful.Services.Http.Security
             // Crear un claimsIdentity 
             var claimsIdentity = new ClaimsIdentity(new[] {
                 new Claim(ClaimTypes.Name, username),
-                new Claim(ClaimTypes.Role, rolname)
+                new Claim(ClaimTypes.Role, rolname),
+                new Claim(ClaimTypes.Email,"username@email.com"),
+                new Claim(ClaimTypes.Surname,"Apellido"),
+                new Claim("UOC","UOC"),
+                new Claim("DescripcionUOC","Descripción UOC"),
+                new Claim("UnidadEjecutoraSeguimiento","unidad Ejecutora Seguimiento"),
             });
 
-            // crear token para el usuario
+            // Crear token para el usuario
             var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
             var jwtSecurityToken = tokenHandler.CreateJwtSecurityToken(
                 audience: audienceToken,
                 issuer: issuerToken,
                 subject: claimsIdentity,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.AddMinutes(Convert.ToInt32(expireTime)),
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToInt32(expireTime)), 
                 signingCredentials: signingCredentials);
 
             var jwtTokenString = tokenHandler.WriteToken(jwtSecurityToken);

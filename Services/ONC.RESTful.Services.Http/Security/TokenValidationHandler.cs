@@ -43,13 +43,11 @@ namespace ONC.RESTful.Services.Http.Security
         /// <returns></returns>
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            HttpStatusCode statusCode;
-            string token;
+            //HttpStatusCode statusCode;
 
             // Determinar si existe un jwt o no
-            if (!TryRetrieveToken(request, out token))
+            if (!TryRetrieveToken(request, out var token))
             {
-                statusCode = HttpStatusCode.Unauthorized;
                 return base.SendAsync(request, cancellationToken);
             }
 
@@ -80,14 +78,21 @@ namespace ONC.RESTful.Services.Http.Security
             }
             catch (SecurityTokenValidationException)
             {
-                statusCode = HttpStatusCode.Unauthorized;
+                //statusCode = HttpStatusCode.Unauthorized;
+                var httpResponseMessage = request.CreateErrorResponse(HttpStatusCode.Unauthorized,
+                    "Indica que el recurso solicitado requiere autenticación. El encabezado WWW-Authenticate contiene los detalles de cómo realizar la autenticación.");
+                return Task<HttpResponseMessage>.Factory.StartNew(() => httpResponseMessage, cancellationToken);
             }
             catch (Exception)
             {
-                statusCode = HttpStatusCode.InternalServerError;
+                //statusCode = HttpStatusCode.InternalServerError;
+                var httpResponseMessage = request.CreateErrorResponse(HttpStatusCode.InternalServerError,
+                    "Indica que se ha producido un error genérico en el servidor.");
+                return Task<HttpResponseMessage>.Factory.StartNew(() => httpResponseMessage, cancellationToken);
             }
+            
 
-            return Task<HttpResponseMessage>.Factory.StartNew(() => new HttpResponseMessage(statusCode) { }, cancellationToken);
+            //return Task<HttpResponseMessage>.Factory.StartNew(() => new HttpResponseMessage(statusCode) { }, cancellationToken);
         }
 
         /// <summary>

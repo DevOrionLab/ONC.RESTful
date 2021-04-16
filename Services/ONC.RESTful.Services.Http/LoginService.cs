@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -19,7 +20,7 @@ namespace ONC.RESTful.Services.Http
     /// </summary>
     [AllowAnonymous]
     [RoutePrefix("api/login")]
-    internal class LoginService : ApiController
+    public class LoginService : ApiController
     {
         /// <summary>
         /// 
@@ -27,7 +28,7 @@ namespace ONC.RESTful.Services.Http
         /// <returns></returns>
         [HttpGet]
         [Route("ping")]
-        public IHttpActionResult Ping()
+        internal IHttpActionResult Ping()
         {
             return Ok(true);
         }
@@ -51,8 +52,12 @@ namespace ONC.RESTful.Services.Http
         /// <returns></returns>
         [HttpPost]
         [Route("authenticate")]
-        public IHttpActionResult Authenticate(LoginRequest login)
+        public HttpResponseMessage Authenticate(LoginRequest login)
         {
+            var isAuthenticate = Convert.ToBoolean(ConfigurationManager.AppSettings["JWT_AUTHENTICATE"]);
+            if (!isAuthenticate)
+                return Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Authenticate Unauthorized");
+
             if (login == null)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
@@ -61,7 +66,7 @@ namespace ONC.RESTful.Services.Http
             if (isTesterValid)
             {
                 var token = TokenGenerator.GenerateTokenJwt(login.Username, RolName.Constructor);
-                return Ok(token);
+                return Request.CreateResponse(HttpStatusCode.OK, token );
             }
 
             // *** Administrator
@@ -69,11 +74,10 @@ namespace ONC.RESTful.Services.Http
             if (isAdminValid)
             {
                 var token = TokenGenerator.GenerateTokenJwt(login.Username, RolName.Administrator);
-                return Ok(token);
+                return Request.CreateResponse(HttpStatusCode.OK, token);
             }
 
-            // Unauthorized access 
-            return Unauthorized();
+            return Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Authenticate Unauthorized");
         }
     }
 
