@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\json-apis-listado-decreto-1169-datos-abiertos-mop.txt" />
+    <Content Include="App_Data\LogFile.txt" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
   </ItemGroup>

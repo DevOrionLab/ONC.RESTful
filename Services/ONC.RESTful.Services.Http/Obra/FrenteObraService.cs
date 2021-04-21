@@ -69,7 +69,7 @@ namespace ONC.RESTful.Services.Http
             var result = bc.FdoDetalladoPorNumero(numero);
 
             return result == null
-                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "FrenteObra not found")
+                ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "El Frente Obra no existe.")
                 : Request.CreateResponse(HttpStatusCode.OK, result as IDictionary<string, object>);
         }
 

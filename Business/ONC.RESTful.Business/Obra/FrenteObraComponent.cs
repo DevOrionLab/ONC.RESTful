@@ -49,6 +49,9 @@ namespace ONC.RESTful.Business.Obra
             // Paso 1: llamar a SelectByNumeroToExpando en FrenteObraDac.
             var result = dac.SelectByNumeroToExpando(numero);
 
+            if (result.Count == 0)
+                return null;
+
             var contratoVigente = result.First();
             var contratoOriginal = result.Last();
 

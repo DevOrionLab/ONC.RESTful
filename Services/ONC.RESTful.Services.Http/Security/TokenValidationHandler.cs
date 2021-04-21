@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using Microsoft.IdentityModel.Tokens;
+using ONC.RESTful.Framework.Logging;
 
 namespace ONC.RESTful.Services.Http.Security
 {
@@ -76,18 +77,18 @@ namespace ONC.RESTful.Services.Http.Security
 
                 return base.SendAsync(request, cancellationToken);
             }
-            catch (SecurityTokenValidationException)
+            catch (SecurityTokenValidationException securityTokenValidation)
             {
-                //statusCode = HttpStatusCode.Unauthorized;
                 var httpResponseMessage = request.CreateErrorResponse(HttpStatusCode.Unauthorized,
                     "Indica que el recurso solicitado requiere autenticación. El encabezado WWW-Authenticate contiene los detalles de cómo realizar la autenticación.");
+                LoggingService.Instance.Error(securityTokenValidation);
                 return Task<HttpResponseMessage>.Factory.StartNew(() => httpResponseMessage, cancellationToken);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //statusCode = HttpStatusCode.InternalServerError;
                 var httpResponseMessage = request.CreateErrorResponse(HttpStatusCode.InternalServerError,
-                    "Indica que se ha producido un error genérico en el servidor.");
+                    "Indica que se ha producido un error genérico del servidor.Por favor comuníquese con el administrador.");
+                LoggingService.Instance.Error(ex);
                 return Task<HttpResponseMessage>.Factory.StartNew(() => httpResponseMessage, cancellationToken);
             }
             
