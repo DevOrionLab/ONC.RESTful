@@ -8,6 +8,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -15,6 +17,7 @@ using System.Web.Http.Description;
 using Newtonsoft.Json.Linq;
 using ONC.RESTful.Business.Obra;
 using ONC.RESTful.Entities.Obra;
+using ONC.RESTful.Services.Http.Security;
 using ONC.RESTful.Services.Http.Utils;
 
 namespace ONC.RESTful.Services.Http
@@ -22,7 +25,7 @@ namespace ONC.RESTful.Services.Http
     /// <summary>
     /// FrenteObra HTTP service controller.
     /// </summary>
-    [Authorize(Roles = "Constructor")]
+    //[Authorize(Roles = "FrenteObra")]
     [RoutePrefix("api/frenteObra")]
     public class FrenteObraService : ApiController
     {
@@ -65,8 +68,11 @@ namespace ONC.RESTful.Services.Http
         [ResponseType(typeof(FdoDetalladoPorNumero))]
         public HttpResponseMessage GetFdoDetalladoPorNumero([FromUri] string numero)
         {
+            var dataValue = TokenValidationHandler.ReadToken(this.Request, "fdo_ues_id");
+            var idUnidadEjecutora = Convert.ToInt64(dataValue);
+
             var bc = FrenteObraComponent.Instance;
-            var result = bc.FdoDetalladoPorNumero(numero);
+            var result = bc.FdoDetalladoPorNumero(numero, idUnidadEjecutora);
 
             return result == null
                 ? Request.CreateErrorResponse(HttpStatusCode.NotFound, "El Frente Obra no existe.")

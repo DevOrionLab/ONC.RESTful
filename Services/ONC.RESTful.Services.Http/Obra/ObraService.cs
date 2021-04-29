@@ -295,9 +295,9 @@ namespace ONC.RESTful.Services.Http
         /// <response code="422">Unprocessable Entity</response>
         /// <response code="500">Internal Server Error</response>
         [HttpPost]
-        [Route("SubcontratistasAutorizado")]
+        [Route("SubContratistaAutorizado")]
         [ResponseType(typeof(SubcontratistaAutorizado))]
-        public async Task<HttpResponseMessage> SubcontratistaAutorizado(SubcontratistaAutorizado model)
+        public async Task<HttpResponseMessage> SubContratistaAutorizado(SubcontratistaAutorizado model)
         {
             var result = await ObraComponent<SubcontratistaAutorizado>.Instance.Create(model);
             return HttpResponseMessageCreate(model.GetType().Name, model.Numero, result);
@@ -314,9 +314,9 @@ namespace ONC.RESTful.Services.Http
         /// <response code="422">Unprocessable Entity</response>
         /// <response code="500">Internal Server Error</response>
         [HttpGet]
-        [Route("GetSubcontratistaAutorizado")]
+        [Route("GetSubContratistaAutorizado")]
         [ResponseType(typeof(SubcontratistaAutorizado))]
-        public async Task<HttpResponseMessage> GetSubcontratistaAutorizado(int id)
+        public async Task<HttpResponseMessage> GetSubContratistaAutorizado(int id)
         {
             var result = await ObraComponent<SubcontratistaAutorizado>.Instance.GetById(id);
             return HttpResponseMessageResult(result);

@@ -37,17 +37,18 @@ namespace ONC.RESTful.Business.Obra
         }
 
         /// <summary>
-        /// Contrato vigente: mayor id y estado > 3
+        /// Contrato vigente : mayor id y estado > 3
         /// Contrato original: menor id y estado > 3
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns>ObDevuelve un objeto FrenteObra detallado </returns>
-        public dynamic FdoDetalladoPorNumero(string numero)
+        /// <param name="idUnidadEjecutora">id Unidad Ejecutora de Seguimiento</param>
+        /// <returns>Devuelve un objeto FrenteObra detallado</returns>
+        public dynamic FdoDetalladoPorNumero(string numero, long idUnidadEjecutora)
         {
             var dac = new FrenteObraDac();
 
             // Paso 1: llamar a SelectByNumeroToExpando en FrenteObraDac.
-            var result = dac.SelectByNumeroToExpando(numero);
+            var result = dac.SelectByNumeroToExpando(numero, idUnidadEjecutora);
 
             if (result.Count == 0)
                 return null;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -17,6 +18,19 @@ namespace ONC.RESTful.Services.Http.Security
     /// </summary>
     public class TokenValidationHandler : DelegatingHandler
     {
+        internal static string ReadToken(HttpRequestMessage request, string claimType )
+        {
+            if (!TryRetrieveToken(request, out var token))
+            {
+                var httpResponseMessage = "Indica que el recurso solicitado requiere autenticación. El encabezado WWW-Authenticate contiene los detalles de cómo realizar la autenticación.";
+                throw new Exception(httpResponseMessage);
+                
+            }
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
+            var dataValue = jsonToken.Claims.First(claim => claim.Type == claimType).Value;
+            return dataValue;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -91,8 +105,6 @@ namespace ONC.RESTful.Services.Http.Security
                 LoggingService.Instance.Error(ex);
                 return Task<HttpResponseMessage>.Factory.StartNew(() => httpResponseMessage, cancellationToken);
             }
-            
-
             //return Task<HttpResponseMessage>.Factory.StartNew(() => new HttpResponseMessage(statusCode) { }, cancellationToken);
         }
 

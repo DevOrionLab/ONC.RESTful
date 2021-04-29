@@ -77,8 +77,9 @@ namespace ONC.RESTful.Data.Obra
         /// OBRA.FrenteObra.NumeroFrenteObra
         /// </summary>
         /// <param name="numero"> Valor alfanumérico que representa el Número del Frente de Obra.</param>
+        /// <param name="idUnidadEjecutora"> Valor numérico que representa la Unidad Ejecutora.</param> 
         /// <returns>Devuelve un objeto dynamic.</returns>
-        public List<dynamic> SelectByNumeroToExpando(string numero)
+        public List<dynamic> SelectByNumeroToExpando(string numero, long idUnidadEjecutora)
         {
             const string SQL_STATEMENT = "[OBRA_SelectFrenteObraByNumero]";
 
@@ -88,6 +89,7 @@ namespace ONC.RESTful.Data.Obra
             using (var cmd = db.GetStoredProcCommand(SQL_STATEMENT))
             {
                 db.AddInParameter(cmd, "@numero", DbType.String, numero);
+                db.AddInParameter(cmd, "@idUnidadEjecutora", DbType.Int64, idUnidadEjecutora);
                 using (var dr = db.ExecuteReader(cmd))
                 {
                     while (dr.Read())
